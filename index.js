@@ -5,7 +5,7 @@ const map = new mapboxgl.Map({
     container: 'map', // container ID
     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
     style: 'mapbox://styles/mapbox/dark-v11', // style URL
-    zoom: 10, // starting zoom
+    zoom: 11, // starting zoom
     center: [0.022038, 51.480689] // starting position
 });
 
