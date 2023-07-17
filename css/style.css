@@ -1,0 +1,246 @@
+/*            */
+/* GRID/CARDS */
+/*            */
+
+.grid {
+    display: grid;
+    position: relative;
+    max-width: 100%;
+    grid-template-columns: repeat(4, 266px);
+    grid-template-rows: repeat(6, 266px);
+    column-gap: 24px;
+    row-gap: 24px;
+    margin-bottom: 80px;
+}
+
+.grid-container {
+    max-width: 1200px;
+    padding: 0 32px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 32px;
+    background-color: var(--card-color);
+    box-shadow: 0.2rem 0.4rem 12rem rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    transition: var(--transition-delay);
+}
+
+/*            */
+/*     NAV    */
+/*            */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 96px;
+    padding: 0 32px;
+    max-width: 1200px;
+    margin: 32px auto 32px auto;
+}
+
+.filters-container {
+    background-color: var(--filter-background-color);
+    transition: var(--transition-delay);
+    padding: 4px 5px 4px 5px;
+    border-radius: 100px;
+}
+
+.filters {
+    display: flex;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+}
+
+/*               */
+/*  THEME TOGGLE */
+/*               */
+
+
+.theme-toggle-container {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    height: 32px;
+    width: 56px;
+    border-radius: 100px;
+    background: var(--toggle-background);
+    box-shadow: var(--toggle-box-shadow);
+    transition: var(--toggle-transition);
+}
+
+.theme-switch {
+    position: absolute;
+    top: 4px;
+    left: var(--switch-position-left);
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: var(--switch-background);
+    box-shadow: var(--switch-box-shadow);
+    transition: var(--toggle-transition);
+}
+
+.theme-toggle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.toggle-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    pointer-events: none;
+    color: var(--toggle-icon-color);
+}
+
+.sun,
+.dark .moon {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.moon,
+.dark .sun {
+    opacity: 0;
+    transition: 0.2s;
+}
+
+/*            */
+/*    INTRO   */
+/*            */
+
+.card-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.intro-header {
+    margin-bottom: 0.7em;
+}
+
+.intro-subheader {
+    margin-bottom: 0.5em;
+}
+
+.intro-text {
+    /* margin-bottom: 2em; */
+    font-size: 1rem;
+    line-height: 1.2;
+    /* font-weight: 400; */
+    color: var(--text-color);
+}
+
+.intro-btn-container {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-delay);
+}
+
+.intro-btn {
+    border: 2px solid rgb(215, 215, 215);
+    background: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: .5em 1.2em;
+    border-radius: 100px;
+    transition: var(--transition-delay);
+}
+
+.intro-btn:hover {
+    box-shadow: 0 0 0 7px var(--filter-background-color)
+}
+
+.intro-btn:active {
+    box-shadow: 0 0 0 7px rgba(165, 165, 165, 0.5);
+}
+
+
+
+/*            */
+/* MAPBOX API */
+/*            */
+
+
+.card-map {
+    padding: none;
+    border-radius: 32px;
+    overflow: hidden !important;
+}
+
+.mapboxgl-ctrl-logo {
+    visibility: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+
+.mapboxgl-canvas {
+    border-radius: 32px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/*              */
+/* SOCIAL MEDIA */
+/*              */
+
+.social-media-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.social-media-logo {
+    color: #ffffff;
+    height: 80px;
+    width: 80px;
+}
+
+.right-arrow {
+    color: #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+}
+
+.social-media-btn {
+    position: absolute;
+    background: rgb(0, 0, 0, 0.3);
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    right: 16px;
+    bottom: 16px;
+}
+
+.social-media-btn:hover {
+    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.5);
+}
+
+.card-github {
+    background: #252525;
+}
+
+.card-linkedin {
+    background: #5285ce;
+}

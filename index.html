@@ -14,12 +14,7 @@
 
 <body>
     <header>
-        <div class="theme-toggle-container">
-            <div class="theme-toggle">
-                <i class="fa-solid fa-brightness"></i>
-                <i class="fa-solid fa-moon"></i>
-            </div>
-        </div>
+        <h1>LZ</h1>
         <nav>
             <div class="filters-container">
                 <ul class="filters">
@@ -30,65 +25,84 @@
                 </ul>
             </div>
         </nav>
+        <div class="theme-toggle-container">
+            <div class="theme-toggle">
+                <div class="theme-switch">
+                    <ion-icon class="toggle-icon sun" name="sunny"></ion-icon>
+                    <ion-icon class="toggle-icon moon" name="moon"></ion-icon>
+                </div>
+            </div>
+        </div>
     </header>
-    <main class="grid-container">
-        <!-- INTRO CARD -->
-        <div class="card intro-card" id="card-intro">
-            <h1 class="intro-header">Lisimba Zajota</h1>
-            <h2 class="intro-subheader">Self-Taught Front-End Developer</h2>
-            <div class="intro-text-container">
-                <p class="intro-text">Hey, my name is Simba and welcome to my portfolio! My goal is to level up my
-                    skills
-                    as a developer and join a team I can grow with.</p>
-            </div>
-            <div class="intro-btn-container">
-                <button class="intro-btn intro-btn-primary">My Projects...</button>
-                <button class="intro-btn intro-btn-secondary">Expand...</button>
-            </div>
-        </div>
-        <!-- MAP -->
-        <div class="card map-card" id="card-map">
-            <div id="map">
+    <main>
+        <div class="grid-container">
+            <div class="grid">
+                <!-- INTRO CARD -->
+                <div class="card card-intro" id="card-intro">
+                    <div>
+                        <h1 class="intro-header">Lisimba Zajota</h1>
+                        <h2 class="intro-subheader">Self-Taught Front-End Developer</h2>
+                        <div class="intro-text-container">
+                            <p class="intro-text">Hey, my name is Simba and welcome to my portfolio! My goal is to level
+                                up
+                                my
+                                skills
+                                as a developer and join a team I can grow with.</p>
+                        </div>
+                    </div>
+                    <div class="intro-btn-container">
+                        <button class="intro-btn intro-btn-primary">My Projects...</button>
+                        <button class="intro-btn intro-btn-secondary">Expand...</button>
+                    </div>
+                </div>
+                <!-- MAP -->
+                <div class="card-map" id="card-map">
+                    <div id="map">
 
+                    </div>
+                </div>
+                <div class="card card-contact" id="card-contact">
+                    <form action="https://formsubmit.co/simbazajota@gmail.com" method="POST">
+                        <h3>Get in Touch:</h3>
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" rows="4" placeholder="..." required></textarea>
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <!-- GITHUB -->
+                <div class="card card-github social-media-container" id="card-github">
+                    <a href="https://github.com/lzajota" aria-label="Simba's Github" target="_blank" rel="noopener">
+                        <ion-icon class="social-media-logo" name="logo-github"></ion-icon></a>
+                    <a class="social-media-btn" href="https://github.com/lzajota" target="_blank" rel="noopener">
+                        <ion-icon class="right-arrow" name="arrow-forward-outline"></ion-icon>
+                    </a>
+                </div>
+                <!-- LINKEDIN -->
+                <div class="card card-linkedin social-media-container" id="card-linkedin">
+                    <a href="https://www.linkedin.com/in/lisimba-zajota/" aria-label="Ryan's linkedin" target="_blank"
+                        rel="noopener">
+                        <ion-icon class="social-media-logo" name="logo-linkedin"></ion-icon></a>
+                    <a class="social-media-btn" href="https://www.linkedin.com/in/lisimba-zajota/" target="_blank"
+                        rel="noopener">
+                        <ion-icon class="right-arrow" name="arrow-forward-outline"></ion-icon>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="card card-contact">
-            <form action="https://formsubmit.co/simbazajota@gmail.com" method="POST">
-                <h3>Get in Touch:</h3>
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="subject" placeholder="Subject" required>
-                <textarea name="message" rows="4" placeholder="..." required></textarea>
-                <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="_honey" style="display:none">
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- GITHUB -->
-        <div class="card card--github card--center" id="card--github--all">
-            <a class="social-media-container" href="https://github.com/RyBuilds" aria-label="Ryan's github"
-                target="_blank" rel="noopener"></a>
-            <ion-icon class="social-media-logo" name="logo-github"></ion-icon>
-            <a class="social-media-btn" href="https://github.com/RyBuilds" target="_blank" rel="noopener">
-                <ion-icon class="social-media-arrow" name="arrow-forward-outline"></ion-icon>
-            </a>
-        </div>
-        <!-- LINKEDIN -->
-        <div class="card card--linkedin card--center" id="card--linkedin--all">
-            <a class="social-media-container" href="https://www.linkedin.com/in/ryanregiste"
-                aria-label="Ryan's linkedin" target="_blank" rel="noopener"></a>
-            <ion-icon class="social-media-logo" name="logo-linkedin"></ion-icon>
-            <a class="social-media-btn" href="https://www.linkedin.com/in/ryanregiste" target="_blank" rel="noopener">
-                <ion-icon class="social-media-arrow" name="arrow-forward-outline"></ion-icon>
-            </a>
         </div>
 
     </main>
 
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://kit.fontawesome.com/2f4f39a2d2.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="index.js"></script>
 </body>
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="https://kit.fontawesome.com/2f4f39a2d2.js" crossorigin="anonymous"></script>
-<script src="index.js"></script>
+
 
 </html>
