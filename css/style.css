@@ -25,6 +25,7 @@
     box-shadow: 0.2rem 0.4rem 12rem rgba(0, 0, 0, 0.08);
     padding: 32px;
     transition: var(--transition-delay);
+    overflow: hidden;
 }
 
 /*            */
@@ -128,10 +129,6 @@ header {
     justify-content: space-between;
 }
 
-.intro-header {
-    margin-bottom: 0.7em;
-}
-
 .intro-subheader {
     margin-bottom: 0.5em;
 }
@@ -156,7 +153,7 @@ header {
     border: 2px solid rgb(215, 215, 215);
     background: none;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 500;
     padding: .5em 1.2em;
     border-radius: 100px;
     transition: var(--transition-delay);
@@ -169,6 +166,146 @@ header {
 .intro-btn:active {
     box-shadow: 0 0 0 7px rgba(165, 165, 165, 0.5);
 }
+
+
+/*         */
+/* CONTACT */
+/*         */
+
+.card-contact {
+    /* margin: 32px 0; */
+    border: none;
+    outline: none;
+}
+
+form .form-row .input-data {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+form .form-row .textarea {
+    height: 100%;
+}
+
+.form-header {
+    margin-bottom: 20px;
+}
+
+.input-data input,
+.textarea textarea {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    height: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    outline: none;
+}
+
+.input-data input:focus~label,
+.textarea textarea:focus~label,
+.input-data input:valid~label,
+.textarea textarea:valid~label {
+    transform: translateY(-25px);
+    font-size: 14px;
+    color: #3498db;
+}
+
+input:focus,
+input:active {
+    border-color: transparent;
+}
+
+.textarea textarea {
+    resize: none;
+    padding-top: 10px;
+}
+
+.input-data label {
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.textarea label {
+    margin-top: 100px;
+    width: 100%;
+    bottom: 210px;
+    background: #fff;
+}
+
+.input-data .underline {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+
+.input-data .underline:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #3498db;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus~.underline:before,
+.input-data input:valid~.underline:before,
+.textarea textarea:focus~.underline:before,
+.textarea textarea:valid~.underline:before {
+    transform: scale(1);
+}
+
+.contact-btn {
+    border: 2px solid rgb(215, 215, 215);
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    padding: .5em 1.2em;
+    border-radius: 100px;
+    transition: var(--transition-delay);
+}
+
+.contact-btn:hover {
+    box-shadow: 0 0 0 7px var(--filter-background-color)
+}
+
+.contact-btn:active {
+    box-shadow: 0 0 0 7px rgba(165, 165, 165, 0.5);
+}
+
+/*            */
+/* SKILLS     */
+/*            */
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+    opacity: .6;
+}
+
+.skill-icon:hover {
+    opacity: 1;
+    transition: var(--transition-delay);
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+}
+
 
 
 

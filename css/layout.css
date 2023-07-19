@@ -101,6 +101,45 @@ body.dark {
     /* CTA */
 }
 
+/*         */
+/* UTILITY */
+/*         */
+
+.card-header {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+button {
+    border: 2px solid rgb(215, 215, 215);
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    padding: .5em 1.2em;
+    border-radius: 100px;
+    transition: var(--transition-delay);
+}
+
+.primary-btn:hover {
+    box-shadow: 0 0 0 7px var(--filter-background-color);
+    transform: scale(1.04);
+}
+
+.secondary-btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+}
+
+
+
+/*        */
+/*        */
+/*        */
+/*        */
+
+
+
 .filter {
     cursor: pointer;
     border-radius: 100px;
@@ -140,7 +179,7 @@ body.dark {
   grid-row: 1/2; */
 }
 
-.card--learning {
+.card-contact {
     grid-column: 4/5;
     grid-row: 1/3;
 }

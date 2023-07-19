@@ -40,38 +40,88 @@
                 <!-- INTRO CARD -->
                 <div class="card card-intro" id="card-intro">
                     <div>
-                        <h1 class="intro-header">Lisimba Zajota</h1>
-                        <h2 class="intro-subheader">Self-Taught Front-End Developer</h2>
-                        <div class="intro-text-container">
-                            <p class="intro-text">Hey, my name is Simba and welcome to my portfolio! My goal is to level
-                                up
-                                my
-                                skills
-                                as a developer and join a team I can grow with.</p>
-                        </div>
+                        <h2 class="card-header">Lisimba Zajota</h1>
+                            <h2 class="intro-subheader">Front-End Developer</h2>
+                            <div class="intro-text-container">
+                                <p class="intro-text">Hey, my name is Simba and welcome to my portfolio! My goal is to
+                                    level
+                                    up
+                                    my
+                                    skills
+                                    as a developer and join a team I can grow with.</p>
+                            </div>
                     </div>
                     <div class="intro-btn-container">
-                        <button class="intro-btn intro-btn-primary">My Projects...</button>
-                        <button class="intro-btn intro-btn-secondary">Expand...</button>
+                        <button class="primary-btn">My Projects...</button>
+                        <button class="primary-btn">Expand...</button>
                     </div>
                 </div>
                 <!-- MAP -->
                 <div class="card-map" id="card-map">
                     <div id="map">
-
                     </div>
                 </div>
+                <!-- CONTACT -->
                 <div class="card card-contact" id="card-contact">
+
                     <form action="https://formsubmit.co/simbazajota@gmail.com" method="POST">
-                        <h3>Get in Touch:</h3>
-                        <input type="text" name="name" placeholder="Full Name" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="text" name="subject" placeholder="Subject" required>
-                        <textarea name="message" rows="4" placeholder="..." required></textarea>
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="text" name="_honey" style="display:none">
-                        <button type="submit">Send</button>
+                        <h2 lass="card-header">Get in Touch:</h2>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" required>
+                                <div class="underline"></div>
+                                <label for="">First Name</label>
+                            </div>
+                            <div class="input-data">
+                                <input type="text" required>
+                                <div class="underline"></div>
+                                <label for="">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" required>
+                                <div class="underline"></div>
+                                <label for="">Email Address</label>
+                            </div>
+                            <div class="input-data textarea">
+                                <label for="">Write your message:</label>
+                                <br />
+                                <textarea rows="8" cols="80" placeholder="..." required></textarea>
+                                <br />
+                                <!-- <div class="underline"></div> -->
+                            </div>
+
+                            <div class="form-row submit-btn">
+                                <button class="primary-btn">Send</button>
+                            </div>
+                        </div>
                     </form>
+                </div>
+
+
+                <!-- SKILLS -->
+                <div class="card card-skills">
+                    <h2 class="card-header">Skills:</h2>
+                    <div class="skills-container">
+                        <div>
+                            <img class="skill-icon" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
+                                alt="">
+                        </div>
+                        <div>
+                            <img class="skill-icon" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
+                                alt="">
+                        </div>
+                        <div>
+                            <img class="skill-icon"
+                                src="https://upload.vectorlogo.zone/logos/javascript/images/239ec8a4-163e-4792-83b6-3f6d96911757.svg"
+                                alt="">
+                        </div>
+                        <div>
+                            <img class="skill-icon" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+                                alt="">
+                        </div>
+                    </div>
                 </div>
                 <!-- GITHUB -->
                 <div class="card card-github social-media-container" id="card-github">
