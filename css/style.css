@@ -1,3 +1,48 @@
+/*         */
+/* UTILITY */
+/* UTILITY */
+/* UTILITY */
+/*         */
+
+.card-header {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.card-sub-header {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    color: var(--subheading-color);
+    margin-bottom: 4px;
+    pointer-events: none;
+}
+
+button {
+    border: 3px solid var(--button-border-color);
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    padding: .5em 1.2em;
+    border-radius: 100px;
+    transition: var(--transition-delay);
+    color: var(--text-color);
+}
+
+.primary-btn:hover {
+    box-shadow: 0 0 0 7px var(--button-border-color);
+    transform: scale(1.04);
+    /* border: none; */
+}
+
+.secondary-btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+}
+
+
 /*            */
 /* GRID/CARDS */
 /* GRID/CARDS */
@@ -24,11 +69,17 @@
 .card {
     border-radius: 32px;
     background-color: var(--card-color);
-    box-shadow: 0.2rem 0.4rem 12rem rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0.2rem 0.4rem 12rem rgba(0, 0, 0, 0.08); */
     padding: 32px;
     transition: var(--transition-delay);
     overflow: hidden;
 }
+
+
+.card:hover {
+    box-shadow: var(--grid-hover-box-shadow);
+}
+
 
 /*            */
 /*     NAV    */
@@ -61,6 +112,27 @@ header {
     align-items: center;
     justify-content: center;
 }
+
+.filter {
+    cursor: pointer;
+    border-radius: 100px;
+    transition: all 0.3s;
+    padding: 8px 16px;
+}
+
+.filter:hover {
+    color: var(--filter-text-color-on-hover);
+}
+
+.filter.active {
+    background-color: var(--filter-active-color);
+}
+
+.filter.active:hover {
+    color: var(--text-color);
+    cursor: default;
+}
+
 
 /*               */
 /*  THEME TOGGLE */
@@ -135,10 +207,19 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-top: 0;
+}
+
+.intro-img {
+    width: 110px;
+    height: 110px;
+    margin: 0;
+    padding: 0;
 }
 
 .intro-subheader {
-    margin-bottom: 0.5em;
+    font-size: 1.2rem;
+    margin: 0.5em 0;
 }
 
 .intro-text {
@@ -153,25 +234,6 @@ header {
     justify-content: center;
     align-items: center;
     transition: var(--transition-delay);
-}
-
-.intro-btn {
-    border: 2px solid rgb(215, 215, 215);
-    background: none;
-    cursor: pointer;
-    font-weight: 500;
-    padding: .5em 1.2em;
-    border-radius: 100px;
-    transition: var(--transition-delay);
-    color: var(--text-color);
-}
-
-.intro-btn:hover {
-    box-shadow: 0 0 0 7px var(--filter-background-color)
-}
-
-.intro-btn:active {
-    box-shadow: 0 0 0 7px rgba(165, 165, 165, 0.5);
 }
 
 
@@ -365,6 +427,11 @@ input:active {
     padding: none;
     border-radius: 32px;
     overflow: hidden !important;
+    transition: var(--transition-delay);
+}
+
+.card-map:hover {
+    box-shadow: var(--grid-hover-box-shadow);
 }
 
 .mapboxgl-ctrl-logo,
@@ -448,7 +515,7 @@ input:active {
     position: absolute;
     background: rgb(0, 0, 0, 0.3);
     padding: 8px;
-    border-radius: 50%;
+    border-radius: 100%;
     cursor: pointer;
     transition: all 0.3s;
     right: 16px;
@@ -456,7 +523,7 @@ input:active {
 }
 
 .social-media-btn:hover {
-    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
 }
 
 .card-github {

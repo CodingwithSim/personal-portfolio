@@ -34,7 +34,7 @@ function setupMap() {
     map.on('load', () => {
         // Load an image from an external URL.
         map.loadImage(
-            'assets/memoji.png',
+            'assets/memoji4.png',
             (error, image) => {
                 if (error) throw error;
 
