@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -25,13 +25,9 @@
                 </ul>
             </div>
         </nav>
-        <div class="theme-toggle-container">
-            <div class="theme-toggle">
-                <div class="theme-switch">
-                    <ion-icon class="toggle-icon sun" name="sunny"></ion-icon>
-                    <ion-icon class="toggle-icon moon" name="moon"></ion-icon>
-                </div>
-            </div>
+        <div class="theme-switcher">
+            <ion-icon class="toggle-icon sun" name="sunny"></ion-icon>
+            <ion-icon class="toggle-icon moon" name="moon"></ion-icon>
         </div>
     </header>
     <main>
@@ -40,7 +36,7 @@
                 <!-- INTRO CARD -->
                 <!-- INTRO CARD -->
                 <!-- INTRO CARD -->
-                <div class="card card-intro" id="card-intro">
+                <div class="card card-intro" id="card-intro" data-card="about">
                     <div>
                         <img class="intro-img" src="/assets/memoji3.png" alt="">
                         <h2 class="intro-subheader">Front-End Developer</h2>
@@ -57,7 +53,7 @@
                 <!-- MAP -->
                 <!-- MAP -->
                 <!-- MAP -->
-                <div class="card-map" id="card-map">
+                <div class="card-map" id="card-map" data-card="about">
                     <div id="map">
                         <ion-icon class="zoom-in-icon zoom-icon" name="add-outline"></ion-icon>
                         <ion-icon class="zoom-out-icon zoom-icon" name="remove-outline"></ion-icon>
@@ -67,7 +63,6 @@
                 <!-- CONTACT -->
                 <!-- CONTACT -->
                 <div class="card card-contact" id="card-contact">
-
                     <form action="https://formsubmit.co/simbazajota@gmail.com" method="POST">
                         <h2 lass="card-header">Get in Touch:</h2>
                         <div class="form-row">
@@ -105,7 +100,7 @@
                 <!-- SKILLS -->
                 <!-- SKILLS -->
                 <!-- SKILLS -->
-                <div class="card card-skills">
+                <div class="card card-skills" data-card="about">
                     <h2 class="card-header">Skills:</h2>
                     <div class="skills-container">
                         <div>
@@ -140,8 +135,9 @@
                 <!-- GITHUB -->
                 <!-- GITHUB -->
                 <!-- GITHUB -->
-                <div class="card card-github social-media-container" id="card-github">
-                    <a href="https://github.com/lzajota" aria-label="Simba's Github" target="_blank" rel="noopener">
+                <div class="card card-github social-media-container" id="card-github" data-card="projects">
+                    <a href="https://github.com/lzajota logo-github" aria-label="Simba's Github" target="_blank"
+                        rel="noopener">
                         <ion-icon class="social-media-logo" name="logo-github"></ion-icon></a>
                     <a class="social-media-btn" href="https://github.com/lzajota" target="_blank" rel="noopener">
                         <ion-icon class="right-arrow" name="arrow-forward-outline"></ion-icon>
@@ -150,10 +146,10 @@
                 <!-- LINKEDIN -->
                 <!-- LINKEDIN -->
                 <!-- LINKEDIN -->
-                <div class="card card-linkedin social-media-container" id="card-linkedin">
+                <div class="card card-linkedin social-media-container" id="card-linkedin" data-card="contact">
                     <a href="https://www.linkedin.com/in/lisimba-zajota/" aria-label="Ryan's linkedin" target="_blank"
                         rel="noopener">
-                        <ion-icon class="social-media-logo" name="logo-linkedin"></ion-icon></a>
+                        <ion-icon class="social-media-logo logo-linkedin" name="logo-linkedin"></ion-icon></a>
                     <a class="social-media-btn" href="https://www.linkedin.com/in/lisimba-zajota/" target="_blank"
                         rel="noopener">
                         <ion-icon class="right-arrow" name="arrow-forward-outline"></ion-icon>

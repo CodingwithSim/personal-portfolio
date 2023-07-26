@@ -1,9 +1,17 @@
 // MAP //
+// MAP //
+// MAP //
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2ltYmF6YWpvdGEiLCJhIjoiY2xrNGd6MDAxMHR6MzNtb3loODVremp0NSJ9.b1PuHNLwqm-py9vsXdXcjA';
 
 const setMapStyle = function () {
-    const mapStyle = document.body.classList.contains('dark')
+    const rootElem = document.documentElement
+    let dataTheme = rootElem.getAttribute('data-theme'),
+        newTheme
+
+    newTheme = (dataTheme === 'light') ? 'dark' : 'light'
+
+    const mapStyle = (newTheme === 'light')
         ? 'dark-v10'
         : 'light-v10';
     return mapStyle;
@@ -71,6 +79,7 @@ function setupMap() {
             }
         );
     });
+
 }
 setupMap();
 
@@ -79,56 +88,46 @@ setupMap();
 // THEME TOGGLE //
 // THEME TOGGLE //
 
-const themeToggle = document.querySelector(`.theme-toggle-container`);
-const body = document.querySelector(`body`);
+const switchTheme = () => {
+    // Get root element and data-theme value
+    const rootElem = document.documentElement
+    let dataTheme = rootElem.getAttribute('data-theme'),
+        newTheme
 
-themeToggle.addEventListener(`click`, function () {
-    themeToggle.classList.toggle(`dark`);
-    body.classList.toggle(`dark`);
-    setupMap();
-});
+    newTheme = (dataTheme === 'light') ? 'dark' : 'light'
 
-// THEME FROM LOCAL STORAGE //
-// THEME FROM LOCAL STORAGE //
-// THEME FROM LOCAL STORAGE //
+    // Set the new HTML attribute
+    rootElem.setAttribute('data-theme', newTheme)
 
-function detectColorScheme() {
-    // CHECK LOCAL STORAGE FIRST
-    if (localStorage.getItem(`theme`)) {
-        if (localStorage.getItem(`theme`) == `dark`) {
-            body.classList.add(`dark`);
-            toggle.classList.add(`dark`);
-            setupMap();
-        }
-        if (localStorage.getItem(`theme`) == `light`) {
-            body.classList.remove(`dark`);
-            toggle.classList.remove(`dark`);
-            setupMap();
-        }
-        // CHECK SYSTEM PREFERENCES
-    } else if (!window.matchMedia) {
-        return false;
-    } else if (window.matchMedia(`(prefers-color-scheme: dark)`).matches) {
-        localStorage.setItem(`theme`, `dark`);
-        body.classList.add(`dark`);
-        toggle.classList.add(`dark`);
-        setupMap();
-    }
-    // DETECT CHANGES AND RELOAD THEME
-    window
-        .matchMedia(`(prefers-color-scheme: dark)`)
-        .addEventListener(`change`, function (event) {
-            const colorScheme = event.matches ? `dark` : `light`;
-
-            if (colorScheme === 'dark') {
-                body.classList.add(`dark`);
-                toggle.classList.add(`dark`);
-                setupMap();
-            } else {
-                body.classList.remove(`dark`);
-                toggle.classList.remove(`dark`);
-                setupMap();
-            }
-        });
+    // Set the new local storage
+    localStorage.setItem('theme', newTheme)
+    setupMap()
 }
-detectColorScheme();
+
+// Check local storage
+let localS = localStorage.getItem('theme'),
+    themeToSet = localS
+
+//If local storage is not set, we check the OS preference
+if (!localS) {
+    themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
+//set the correct theme
+document.documentElement.setAttribute('data-theme', themeToSet)
+setupMap()
+
+// Set event listener for the theme switcher
+document.querySelector(`.theme-switcher`).addEventListener(`click`, switchTheme)
+
+
+// FILTER //
+// FILTER //
+// FILTER //
+
+const filter = document.querySelectorAll(`.filter`);
+const filterContainer = document.querySelector(`.filters-container`);
+
+filterContainer.addEventListener('click', (e) => {
+    console.log(e.target.closest('.filter'))
+})
