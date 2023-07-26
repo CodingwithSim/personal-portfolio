@@ -129,5 +129,5 @@ const filter = document.querySelectorAll(`.filter`);
 const filterContainer = document.querySelector(`.filters-container`);
 
 filterContainer.addEventListener('click', (e) => {
-    console.log(e.target.closest('.filter'))
+
 })

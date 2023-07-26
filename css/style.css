@@ -72,7 +72,7 @@
 
 
 /* ============================================================= */
-/* GENERAL STYLES */
+/*                      GENERAL STYLES */
 /* ============================================================= */
 
 /*         */
@@ -87,7 +87,7 @@
     margin-bottom: 24px;
 }
 
-.card-sub-header {
+.card-subheader {
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.75px;
@@ -147,8 +147,8 @@ button {
     display: grid;
     position: relative;
     max-width: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 266px);
+    grid-template-rows: repeat(6, 266px);
     column-gap: 24px;
     row-gap: 24px;
     margin-bottom: 80px;
@@ -481,6 +481,12 @@ input:active {
     margin-top: 7px;
 }
 
+.project-skills-container .skill-icon {
+    width: 25px;
+    height: 25px;
+
+}
+
 .project-preview-container {
     display: flex;
     height: 270px;
@@ -518,7 +524,6 @@ input:active {
 }
 
 .mapboxgl-ctrl-group {
-    /* display: none !important; */
     opacity: 0.1;
 }
 
