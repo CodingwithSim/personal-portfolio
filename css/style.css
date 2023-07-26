@@ -1,3 +1,80 @@
+:root[data-theme="light"] {
+
+    --card-opacity-inactive: 0.2;
+
+    /* LIGHT MODE VARIABLES */
+    --text-color: #0c1117;
+    --card-color: #ffffff;
+    --scroll-bar-thumb: #ababab;
+    --alternative-text-color: #6e6e6e73;
+    --main-background-color: #f5f5f5;
+    --filter-background-color: #ebebeb;
+    --filter-text-color-on-hover: #6e6e6e;
+    --filter-active-color: #ffffff;
+
+    --toggle-icon-color: var(--text-color);
+    --sun-icon-opacity: 1;
+    --moon-icon-opacity: 0;
+    --toggle-background: #ffffff;
+    --switch-position-left: 3px;
+    --toggle-box-shadow: inset 0 0.2rem 6rem rgba(0, 0, 0, 0.1),
+        inset 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1),
+        inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.05);
+    --toggle-transition: 0.3s;
+    --switch-background: linear-gradient(to bottom, #d8d8d8, #f9f9f9);
+    --switch-box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1),
+        inset 0 0.4rem 0.4rem rgba(255, 255, 255, 1),
+        inset 0 -0.4rem 0.4rem rgba(255, 255, 255, 1);
+
+    --subheading-color: #6e6e6e;
+    --button-border-color: #f1f2f8;
+    --grid-hover-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    --linkedIn-icon-color: white;
+    --linkedIn-background-color: #5285ce;
+    --gitHub-background-color: #252525;
+}
+
+:root[data-theme="dark"] {
+    --text-color: #f1f2f8;
+    --card-color: #2c2c2e;
+    --scroll-bar-thumb: #2c2c2e;
+    --alternative-text-color: #6e6e6e73;
+    --main-background-color: #1c1c1e;
+    --filter-background-color: rgba(0, 0, 0, 0.4);
+    --filter-text-color-on-hover: #6e6e6e;
+    --filter-active-color: #2c2c2e;
+
+    --toggle-icon-color: #f6edb2;
+    --sun-icon-opacity: 0;
+    --moon-icon-opacity: 1;
+    --toggle-background: #3d3d41;
+    --toggle-box-shadow: inset 0 0.8rem 6rem rgba(0, 0, 0, 0.1),
+        inset 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1),
+        inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+    --toggle-transition: 0.3s;
+    --switch-position-left: 39px;
+    --switch-background: linear-gradient(to bottom, #404043, #1c1c1e);
+    --switch-box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.5),
+        inset 0 0.1rem 0.4rem rgba(255, 255, 255, 0.1),
+        inset 0 -0.1rem 0.4rem rgba(255, 255, 255, 0.1);
+
+    --subheading-color: rgba(250, 250, 250, 0.6);
+    --button-border-color: #2f363d;
+    --grid-hover-box-shadow: rgb(36, 36, 37) 0px 4px 16px;
+
+    --linkedIn-icon-color: #5285ce;
+    --linkedIn-background-color: var(--card-color);
+    --gitHub-background-color: var(--card-color);
+}
+
+
+
+
+/* ============================================================= */
+/* GENERAL STYLES */
+/* ============================================================= */
+
 /*         */
 /* UTILITY */
 /* UTILITY */
@@ -27,19 +104,36 @@ button {
     font-weight: 500;
     padding: .5em 1.2em;
     border-radius: 100px;
-    transition: var(--transition-delay);
+    transition: ease-in-out var(--transition-delay);
     color: var(--text-color);
 }
 
 .primary-btn:hover {
     box-shadow: 0 0 0 7px var(--button-border-color);
     transform: scale(1.04);
-    /* border: none; */
 }
 
 .secondary-btn:hover {
     transform: scale(1.04);
     box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+}
+
+.social-media-btn {
+    position: absolute;
+    /* background: rgb(0, 0, 0, 0.3); */
+    padding: 8px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+    right: 16px;
+    bottom: 16px;
+    border: 3px solid var(--button-border-color);
+}
+
+.social-media-btn:hover {
+    box-shadow: 0 0 0 6.5px var(--button-border-color);
+    transition: ease-in-out var(--transition-delay);
+    border: 3px solid var(--button-border-color);
 }
 
 
@@ -53,11 +147,12 @@ button {
     display: grid;
     position: relative;
     max-width: 100%;
-    grid-template-columns: repeat(4, 266px);
-    grid-template-rows: repeat(6, 266px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     column-gap: 24px;
     row-gap: 24px;
     margin-bottom: 80px;
+    border: red solid 1px;
 }
 
 .grid-container {
@@ -69,10 +164,10 @@ button {
 .card {
     border-radius: 32px;
     background-color: var(--card-color);
-    /* box-shadow: 0.2rem 0.4rem 12rem rgba(0, 0, 0, 0.08); */
-    padding: 32px;
+    padding: 22px;
     transition: var(--transition-delay);
     overflow: hidden;
+    border: 3px solid var(--button-border-color)
 }
 
 
@@ -141,60 +236,48 @@ header {
 /*               */
 
 
-.theme-toggle-container {
+.theme-switcher {
     position: relative;
-    display: block;
+    display: flex;
+    gap: 1.33rem;
+    align-items: center;
     cursor: pointer;
-    height: 32px;
-    width: 56px;
-    border-radius: 100px;
+    border-radius: 50px;
+    padding: .7rem;
     background: var(--toggle-background);
     box-shadow: var(--toggle-box-shadow);
-    transition: var(--toggle-transition);
+    transition: ease-in-out var(--toggle-transition);
 }
 
-.theme-switch {
+.theme-switcher::before {
+    content: '';
     position: absolute;
-    top: 4px;
-    left: var(--switch-position-left);
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
+    height: 2rem;
+    width: 2.1rem;
     background: var(--switch-background);
     box-shadow: var(--switch-box-shadow);
     transition: var(--toggle-transition);
+    border-radius: 50px;
+    z-index: 0;
+    left: var(--switch-position-left)
 }
 
-.theme-toggle {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+.theme-switcher ion-icon {
+    z-index: 1;
+    scale: 0.9;
 }
 
 .toggle-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 13px;
-    height: 13px;
-    pointer-events: none;
     color: var(--toggle-icon-color);
+    transition: none;
 }
 
-.sun,
-.dark .moon {
-    opacity: 1;
-    transition: 0.2s;
+.sun {
+    opacity: var(--sun-icon-opacity)
 }
 
-.moon,
-.dark .sun {
-    opacity: 0;
-    transition: 0.2s;
+.moon {
+    opacity: var(--moon-icon-opacity)
 }
 
 /*            */
@@ -206,7 +289,7 @@ header {
 .card-intro {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: 0;
 }
 
@@ -244,10 +327,9 @@ header {
 /*         */
 
 .card-contact {
-    /* margin: 32px 0; */
     border: none;
     outline: none;
-    /* transition: none; */
+    border: 3px solid var(--button-border-color)
 }
 
 form .form-row .input-data {
@@ -420,17 +502,13 @@ input:active {
     width: 100%;
     height: 100%;
     position: relative;
-    /* pointer-events: none; */
-}
-
-.card-map {
-    padding: none;
+    border: 3px solid var(--button-border-color);
     border-radius: 32px;
-    overflow: hidden !important;
-    transition: var(--transition-delay);
+    padding: none;
+    transition: ease-in-out var(--transition-delay);
 }
 
-.card-map:hover {
+#map:hover {
     box-shadow: var(--grid-hover-box-shadow);
 }
 
@@ -496,6 +574,7 @@ input:active {
     align-items: center;
     justify-content: center;
     position: relative;
+    background: var(--card-color);
 }
 
 .social-media-logo {
@@ -511,25 +590,14 @@ input:active {
     border-radius: 100px;
 }
 
-.social-media-btn {
-    position: absolute;
-    background: rgb(0, 0, 0, 0.3);
-    padding: 8px;
-    border-radius: 100%;
-    cursor: pointer;
-    transition: all 0.3s;
-    right: 16px;
-    bottom: 16px;
-}
-
-.social-media-btn:hover {
-    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
-}
-
 .card-github {
-    background: #252525;
+    background: var(--gitHub-background-color);
 }
 
 .card-linkedin {
-    background: #5285ce;
+    background: var(--linkedIn-background-color);
+}
+
+.logo-linkedin {
+    color: var(--linkedIn-icon-color);
 }
