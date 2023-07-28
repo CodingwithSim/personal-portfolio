@@ -125,9 +125,71 @@ document.querySelector(`.theme-switcher`).addEventListener(`click`, switchTheme)
 // FILTER //
 // FILTER //
 
+// const filter = document.querySelectorAll(`.filter`);
+// const filterContainer = document.querySelector(`.filters-container`);
+
+// filterContainer.addEventListener('click', (e) => {
+
+// })
+
+
+function filterProduct(value) {
+    //Button class code
+    let filters = document.querySelectorAll(".filter");
+    filters.forEach((filter) => {
+        //check if value equals innerText
+        if (value.toUpperCase() == filter.innerText.toUpperCase()) {
+            filter.classList.add("active");
+        } else {
+            filter.classList.remove("active");
+        }
+    });
+    //select all cards
+    let cards = document.querySelectorAll(".card");
+    //loop through all cards
+    cards.forEach((card) => {
+        //display all cards on 'all' button click
+        if (value == "all") {
+            card.classList.remove("inactive");
+        } else {
+            //Check if element contains category class
+            if (card.classList.contains(value)) {
+                //display element based on category
+                card.classList.remove("inactive");
+            } else {
+                //inactive other cards
+                card.classList.add("inactive");
+            }
+        }
+    });
+}
+
+
 const filter = document.querySelectorAll(`.filter`);
 const filterContainer = document.querySelector(`.filters-container`);
 
-filterContainer.addEventListener('click', (e) => {
 
+
+filterContainer.addEventListener(`click`, function (event) {
+    const clicked = event.target.closest(`.filter`);
+    if (!clicked) return;
+    filter.forEach(filter => filter.classList.remove(`active`));
+    clicked.classList.add(`active`);
+    document.querySelector(`.card-intro`).setAttribute(`id`, `card-intro-${clicked.dataset.filter}`);
+    document.querySelector(`.card-map`).setAttribute(`id`, `card-map-${clicked.dataset.filter}`);
+    document.querySelector(`.card-contact`).setAttribute(`id`, `card-contact-${clicked.dataset.filter}`);
+    document.querySelector(`.card-skills`).setAttribute(`id`, `card-skills-${clicked.dataset.filter}`);
+    // document.querySelector(`.card-spotify`).setAttribute(`id`, `card-spotify-${clicked.dataset.filter}`);
+    document.querySelector(`.card-github`).setAttribute(`id`, `card-github-${clicked.dataset.filter}`);
+    document.querySelector(`.card-linkedin`).setAttribute(`id`, `card-linkedin-${clicked.dataset.filter}`);
+    document.querySelector(`.card-vanlife`).setAttribute(`id`, `card-vanlife-${clicked.dataset.filter}`);
+    document.querySelector(`.card-quizzical`).setAttribute(`id`, `card-quizzical-${clicked.dataset.filter}`);
+    console.log(clicked)
 })
+
+
+
+//Initially display all products
+window.onload = () => {
+    filterProduct("all");
+};

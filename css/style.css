@@ -128,7 +128,6 @@ a {
 
 .secondary-btn:hover {
     transform: scale(1.04);
-    /* box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08); */
 }
 
 .social-media-btn {
@@ -146,6 +145,10 @@ a {
     box-shadow: 0 0 0 3px var(--button-border-color);
 }
 
+.inactive {
+    opacity: var(--card-opacity-inactive);
+}
+
 
 /*            */
 /* GRID/CARDS */
@@ -155,14 +158,11 @@ a {
 
 .grid {
     display: grid;
-    position: relative;
-    max-width: 100%;
-    grid-template-columns: repeat(4, 266px);
-    grid-template-rows: repeat(6, 266px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     column-gap: 24px;
     row-gap: 24px;
     margin-bottom: 80px;
-    border: red solid 1px;
 }
 
 .grid-container {
@@ -198,8 +198,12 @@ header {
     justify-content: space-between;
     height: 96px;
     padding: 0 32px;
-    max-width: 1200px;
-    margin: 32px auto 32px auto;
+    max-width: 80%x;
+    margin: 32px auto;
+}
+
+.header-logo {
+    max-width: 150px;
 }
 
 .filters-container {
@@ -207,6 +211,7 @@ header {
     transition: var(--transition-delay);
     padding: 4px 5px 4px 5px;
     border-radius: 100px;
+    transform: var(--transition-delay);
 }
 
 .filters {
@@ -231,6 +236,7 @@ header {
 
 .filter.active {
     background-color: var(--filter-active-color);
+    cursor: pointer;
 }
 
 .filter.active:hover {
@@ -300,7 +306,12 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-top: 0;
+    overflow: visible;
+    position: relative;
+}
+
+.intro-text-container {
+    padding-top: 30px;
 }
 
 .intro-img {
@@ -308,6 +319,8 @@ header {
     height: 110px;
     margin: 0;
     padding: 0;
+    position: absolute;
+    bottom: 200px;
 }
 
 .intro-subheader {
@@ -482,24 +495,28 @@ input:active {
 /* PROJECTS */
 /* PROJECTS */
 
+.card-project-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .project-skills-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 3px;
+    gap: 5px;
     margin-top: 7px;
 }
 
 .project-skills-container .skill-icon {
     width: 25px;
     height: 25px;
-
 }
 
 .project-preview-container {
     display: flex;
-    height: 270px;
+    height: 250px;
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
@@ -517,6 +534,7 @@ input:active {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    justify-self: flex-end;
 }
 
 
@@ -525,6 +543,11 @@ input:active {
 /* MAPBOX API */
 /* MAPBOX API */
 /*            */
+
+.card-map {
+    padding: 0;
+}
+
 
 
 #map {

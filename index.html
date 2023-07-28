@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simba's Portfolio</title>
+    <title>Lisimba Zajota</title>
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/layout.css" />
@@ -14,14 +14,14 @@
 
 <body>
     <header>
-        <h1>LZ</h1>
+        <h1 class="header-logo">Lisimba Zajota</h1>
         <nav>
             <div class="filters-container">
                 <ul class="filters">
-                    <li class="filter active" data-filter="all">All</li>
-                    <li class="filter" data-filter="about">About</li>
-                    <li class="filter" data-filter="projects">Projects</li>
-                    <li class="filter" data-filter="contact">Contact</li>
+                    <li class="filter active" onclick="filterProduct('all')" data-filter="all">All</li>
+                    <li class="filter" onclick="filterProduct('about')" data-filter="about">About</li>
+                    <li class="filter" onclick="filterProduct('projects')" data-filter="projects">Projects</li>
+                    <li class="filter" onclick="filterProduct('contact')" data-filter="contact">Contact</li>
                 </ul>
             </div>
         </nav>
@@ -36,14 +36,12 @@
                 <!-- INTRO CARD -->
                 <!-- INTRO CARD -->
                 <!-- INTRO CARD -->
-                <div class="card card-intro" id="card-intro" data-card="about">
-                    <div>
-                        <img class="intro-img" src="/assets/memoji3.png" alt="">
+                <div class="card card-intro about" id="card-intro-all">
+                    <img class="intro-img" src="/assets/memoji3.png" alt="">
+                    <div class="intro-text-container">
                         <h2 class="intro-subheader">Front-End Developer</h2>
-                        <div class="intro-text-container">
-                            <p class="intro-text">Hey, my name is Simba and welcome to my portfolio! My goal is to
-                                level up my skills as a developer and join a team I can grow with.</p>
-                        </div>
+                        <p class="intro-text">Hey, my name is Simba and welcome to my portfolio! My goal is to
+                            level up my skills as a developer and join a team I can grow with.</p>
                     </div>
                     <div class="intro-btn-container">
                         <button class="btn primary-btn">My Projects...</button>
@@ -53,7 +51,7 @@
                 <!-- MAP -->
                 <!-- MAP -->
                 <!-- MAP -->
-                <div class="card-map" id="card-map" data-card="about">
+                <div class="card card-map about" id="card-map-all">
                     <div id="map">
                         <ion-icon class="zoom-in-icon zoom-icon" name="add-outline"></ion-icon>
                         <ion-icon class="zoom-out-icon zoom-icon" name="remove-outline"></ion-icon>
@@ -62,7 +60,7 @@
                 <!-- CONTACT -->
                 <!-- CONTACT -->
                 <!-- CONTACT -->
-                <div class="card card-contact" id="card-contact">
+                <div class="card card-contact contact" id="card-contact-all">
                     <form action="https://formsubmit.co/simbazajota@gmail.com" method="POST">
                         <h2 lass="card-header">Get in Touch:</h2>
                         <div class="form-row">
@@ -99,7 +97,7 @@
                 <!-- SKILLS -->
                 <!-- SKILLS -->
                 <!-- SKILLS -->
-                <div class="card card-skills" data-card="about">
+                <div class="card card-skills about projects" id="card-skills-all">
                     <h2 class="card-header">Skills:</h2>
                     <div class="skills-container">
                         <div>
@@ -129,8 +127,8 @@
                 <!-- PROJECTS -->
                 <!-- PROJECTS -->
                 <!-- PROJECTS -->
-                <div class="card card-quizzical" id="card-vanlife">
-                    <div class="project-name-container">
+                <div class="card card-quizzical projects" id="card-quizzical-all">
+                    <div class="">
                         <p class="card-subheader">PROJECT</p>
                         <h2 class="card-header">Quizzical</h2>
                     </div>
@@ -163,37 +161,40 @@
                     </div>
                 </div>
 
-                <div class="card card-vanlife" id="card-vanlife">
-                    <div class="project-name-container">
+                <div class="card card-vanlife projects" id="card-vanlife-all">
+                    <div>
                         <p class="card-subheader">PROJECT</p>
                         <h2 class="card-header">Vanlife</h2>
                     </div>
-                    <div class="project-builtwith-container">
-                        <p class="card-subheader">BUILT WITH</p>
-                        <div class="project-skills-container">
+                    <div class="card-project-details">
+                        <div>
+                            <p class="card-subheader">BUILT WITH</p>
+                            <div class="project-skills-container">
+                                <img class="skill-icon" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+                                    alt="React Logo" />
 
-                            <img class="skill-icon" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
-                                alt="React Logo" />
+                                <img class="skill-icon"
+                                    src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
+                                    alt="HTML Logo" />
 
-                            <img class="skill-icon" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
-                                alt="HTML Logo" />
+                                <img class="skill-icon" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
+                                    alt="CSS Logo" />
 
-                            <img class="skill-icon" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
-                                alt="CSS Logo" />
-
-                            <img class="skill-icon" src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
-                                alt="Firebase Logo" />
+                                <img class="skill-icon"
+                                    src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
+                                    alt="Firebase Logo" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-preview-container">
-                        <img src="assets/Vanlife-preview.png" alt="">
-                    </div>
-                    <div class="project-btn-container">
-                        <div class="btn primary-btn">
-                            <a href="https://starlit-elf-c26af2.netlify.app/" target="_blank">View</a>
+                        <div class="project-preview-container">
+                            <img src="assets/Vanlife-preview.png" alt="">
                         </div>
-                        <div class="btn secondary-btn">
-                            <a href="">About</a>
+                        <div class="project-btn-container">
+                            <div class="btn primary-btn">
+                                <a href="https://starlit-elf-c26af2.netlify.app/" target="_blank">View</a>
+                            </div>
+                            <div class="btn secondary-btn">
+                                <a href="">About</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -201,7 +202,7 @@
                 <!-- GITHUB -->
                 <!-- GITHUB -->
                 <!-- GITHUB -->
-                <div class="card card-github social-media-container" id="card-github" data-card="projects">
+                <div class="card card-github social-media-container projects" id="card-github-all">
                     <a href="https://github.com/lzajota logo-github" aria-label="Simba's Github" target="_blank"
                         rel="noopener">
                         <ion-icon class="social-media-logo" name="logo-github"></ion-icon></a>
@@ -212,7 +213,7 @@
                 <!-- LINKEDIN -->
                 <!-- LINKEDIN -->
                 <!-- LINKEDIN -->
-                <div class="card card-linkedin social-media-container" id="card-linkedin" data-card="contact">
+                <div class="card card-linkedin social-media-container about contact" id="card-linkedin-all">
                     <a href="https://www.linkedin.com/in/lisimba-zajota/" aria-label="Ryan's linkedin" target="_blank"
                         rel="noopener">
                         <ion-icon class="social-media-logo logo-linkedin" name="logo-linkedin"></ion-icon></a>
