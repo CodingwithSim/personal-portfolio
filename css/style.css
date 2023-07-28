@@ -27,7 +27,7 @@
         inset 0 -0.4rem 0.4rem rgba(255, 255, 255, 1);
 
     --subheading-color: #6e6e6e;
-    --button-border-color: #f1f2f8;
+    --button-border-color: #e2f4ffcd;
     --grid-hover-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     --linkedIn-icon-color: white;
@@ -38,6 +38,8 @@
 }
 
 :root[data-theme="dark"] {
+    --card-opacity-inactive: 0.2;
+
     --text-color: #f1f2f8;
     --card-color: #2c2c2e;
     --scroll-bar-thumb: #2c2c2e;
@@ -548,13 +550,11 @@ input:active {
     padding: 0;
 }
 
-
-
 #map {
     width: 100%;
     height: 100%;
     position: relative;
-    border: 3px solid var(--button-border-color);
+    /* border: 3px solid var(--button-border-color); */
     border-radius: 32px;
     padding: none;
     transition: ease-in-out var(--transition-delay);
