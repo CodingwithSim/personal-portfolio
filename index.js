@@ -197,7 +197,7 @@ const clientSecret = "afa9443db3ce408cad6bdccc5cdd4877";
 
 // Your Spotify Developer Client ID and Redirect URI
 const clientId = "f1c236007d4d446e8277ecc86d4c2319";
-const redirectUri = "http://127.0.0.1:50175/"; // Set this to the URI you've configured in your Spotify Developer Dashboard
+const redirectUri = "https://wondrous-pie-af47eb.netlify.app/"; // Set this to the URI you've configured in your Spotify Developer Dashboard
 
 // Check if the access token is present in the URL (after user authorization)
 const urlParams = new URLSearchParams(window.location.search);
