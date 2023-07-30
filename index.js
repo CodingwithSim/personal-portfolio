@@ -125,13 +125,6 @@ document.querySelector(`.theme-switcher`).addEventListener(`click`, switchTheme)
 // FILTER //
 // FILTER //
 
-// const filter = document.querySelectorAll(`.filter`);
-// const filterContainer = document.querySelector(`.filters-container`);
-
-// filterContainer.addEventListener('click', (e) => {
-
-// })
-
 
 function filterProduct(value) {
     //Button class code
@@ -187,9 +180,65 @@ filterContainer.addEventListener(`click`, function (event) {
     console.log(clicked)
 })
 
-
-
 //Initially display all products
 window.onload = () => {
     filterProduct("all");
 };
+
+
+// SPOTIFY API
+// SPOTIFY API
+// SPOTIFY API
+
+
+const clientSecret = "afa9443db3ce408cad6bdccc5cdd4877";
+
+// app.js
+
+// Your Spotify Developer Client ID and Redirect URI
+const clientId = "f1c236007d4d446e8277ecc86d4c2319";
+const redirectUri = "http://127.0.0.1:50175/"; // Set this to the URI you've configured in your Spotify Developer Dashboard
+
+// Check if the access token is present in the URL (after user authorization)
+const urlParams = new URLSearchParams(window.location.search);
+const accessToken = urlParams.get("access_token");
+
+if (accessToken) {
+    // Hide the login button and show the last played card
+    document.getElementById("loginBtn").style.display = "none";
+    document.getElementById("lastPlayedCard").style.display = "block";
+
+    // Fetch the last played song using the access token
+    fetchLastPlayedSong(accessToken);
+} else {
+    // If the access token is not present, show the login button
+    document.getElementById("loginBtn").addEventListener("click", () => {
+        // Redirect the user to Spotify's authorization page
+        const scopes = "user-read-recently-played"; // Add any additional scopes you need
+        const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes)}&response_type=token`;
+        window.location.href = authUrl;
+    });
+}
+
+function fetchLastPlayedSong(token) {
+    fetch("https://api.spotify.com/v1/me/player/recently-played", {
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            const lastPlayed = data.items[0].track;
+            console.log(lastPlayed)
+            const trackName = lastPlayed.name;
+            const artist = lastPlayed.artists.map(artist => artist.name).join(", ");
+            const albumArtUrl = lastPlayed.album.images[0].url;
+
+            document.getElementById("trackName").textContent = "Track: " + trackName;
+            document.getElementById("artist").textContent = "Artist(s): " + artist;
+            document.getElementById("albumArt").src = albumArtUrl;
+        })
+        .catch(error => {
+            console.error("Error fetching last played song:", error);
+        });
+} 

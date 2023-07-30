@@ -1,5 +1,4 @@
 :root[data-theme="light"] {
-
     --card-opacity-inactive: 0.2;
 
     /* LIGHT MODE VARIABLES */
@@ -12,7 +11,7 @@
     --filter-text-color-on-hover: #6e6e6e;
     --filter-active-color: #ffffff;
 
-    --toggle-icon-color: var(--text-color);
+    --toggle-icon-color: #3498db;
     --sun-icon-opacity: 1;
     --moon-icon-opacity: 0;
     --toggle-background: #ffffff;
@@ -40,6 +39,7 @@
 :root[data-theme="dark"] {
     --card-opacity-inactive: 0.2;
 
+    /* DARK MODE VARIABLES */
     --text-color: #f1f2f8;
     --card-color: #2c2c2e;
     --scroll-bar-thumb: #2c2c2e;
@@ -84,6 +84,7 @@
 /* UTILITY */
 /* UTILITY */
 /*         */
+
 a {
     text-decoration: none;
     color: var(--text-color);
@@ -124,7 +125,7 @@ a {
 }
 
 .primary-btn:hover {
-    box-shadow: 0 0 0 3px var(--button-border-color);
+    box-shadow: 0 0 0 5px var(--button-border-color);
     transform: scale(1.04);
 }
 
@@ -144,7 +145,7 @@ a {
 }
 
 .social-media-btn:hover {
-    box-shadow: 0 0 0 3px var(--button-border-color);
+    box-shadow: 0 0 0 5px var(--button-border-color);
 }
 
 .inactive {
@@ -312,17 +313,13 @@ header {
     position: relative;
 }
 
-.intro-text-container {
-    padding-top: 30px;
-}
-
 .intro-img {
     width: 110px;
     height: 110px;
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: 200px;
+    bottom: 230px;
 }
 
 .intro-subheader {
@@ -420,7 +417,7 @@ input:active {
 
 .textarea label {
     width: 100%;
-    bottom: 230px;
+    bottom: 262px;
     background-color: transparent;
 }
 
