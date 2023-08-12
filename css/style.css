@@ -161,17 +161,17 @@ a {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 266px);
+    grid-template-rows: repeat(4, 266px);
     column-gap: 24px;
     row-gap: 24px;
     margin-bottom: 80px;
 }
 
 .grid-container {
-    max-width: 1200px;
+    max-width: 1136px;
     padding: 0 32px;
-    margin: 0 auto;
+    margin: 50px auto 0;
 }
 
 .card {
@@ -180,7 +180,7 @@ a {
     padding: 22px;
     transition: var(--transition-delay);
     overflow: hidden;
-    border: 3px solid var(--button-border-color)
+    border: 3px solid var(--button-border-color);
 }
 
 
@@ -207,6 +207,7 @@ header {
 
 .header-logo {
     max-width: 150px;
+    font-family: 'Borel', cursive;
 }
 
 .filters-container {
@@ -319,7 +320,7 @@ header {
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: 230px;
+    bottom: 210px;
 }
 
 .intro-subheader {
@@ -358,7 +359,6 @@ form .form-row .input-data {
     width: 100%;
     height: 40px;
     position: relative;
-    /* margin-bottom: 10px; */
     background-color: transparent;
 
 }
@@ -403,8 +403,6 @@ input:active {
 .input-data textarea {
     resize: none;
     padding-top: 15px;
-    font: inherit;
-
 }
 
 .input-data label {
@@ -417,7 +415,7 @@ input:active {
 
 .textarea label {
     width: 100%;
-    bottom: 262px;
+    bottom: 220px;
     background-color: transparent;
 }
 
@@ -444,23 +442,6 @@ input:active {
 .textarea textarea:focus~.underline:before,
 .textarea textarea:valid~.underline:before {
     transform: scale(1);
-}
-
-.contact-btn {
-    border: 2px solid rgb(215, 215, 215);
-    background: none;
-    cursor: pointer;
-    font-weight: 500;
-    padding: .5em 1.2em;
-    border-radius: 50px;
-}
-
-.contact-btn:hover {
-    box-shadow: 0 0 0 7px var(--filter-background-color)
-}
-
-.contact-btn:active {
-    box-shadow: 0 0 0 7px rgba(165, 165, 165, 0.5);
 }
 
 /*            */

@@ -160,6 +160,8 @@ function filterProduct(value) {
 
 const filter = document.querySelectorAll(`.filter`);
 const filterContainer = document.querySelector(`.filters-container`);
+const projectFilter = document.querySelector(`[data-filter="projects"]`);
+
 
 
 
@@ -172,13 +174,17 @@ filterContainer.addEventListener(`click`, function (event) {
     document.querySelector(`.card-map`).setAttribute(`id`, `card-map-${clicked.dataset.filter}`);
     document.querySelector(`.card-contact`).setAttribute(`id`, `card-contact-${clicked.dataset.filter}`);
     document.querySelector(`.card-skills`).setAttribute(`id`, `card-skills-${clicked.dataset.filter}`);
-    // document.querySelector(`.card-spotify`).setAttribute(`id`, `card-spotify-${clicked.dataset.filter}`);
+    document.querySelector(`.card-spotify`).setAttribute(`id`, `card-spotify-${clicked.dataset.filter}`);
     document.querySelector(`.card-github`).setAttribute(`id`, `card-github-${clicked.dataset.filter}`);
     document.querySelector(`.card-linkedin`).setAttribute(`id`, `card-linkedin-${clicked.dataset.filter}`);
     document.querySelector(`.card-vanlife`).setAttribute(`id`, `card-vanlife-${clicked.dataset.filter}`);
     document.querySelector(`.card-quizzical`).setAttribute(`id`, `card-quizzical-${clicked.dataset.filter}`);
-    console.log(clicked)
 })
+
+
+document.querySelector('.intro-btn').addEventListener(`click`, function () {
+    projectFilter.click();
+});
 
 //Initially display all products
 window.onload = () => {
