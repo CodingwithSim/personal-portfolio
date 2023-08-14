@@ -208,8 +208,7 @@ header {
 }
 
 .header-logo {
-    max-width: 150px;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-family: 'Borel', cursive;
 }
 
@@ -455,17 +454,30 @@ input:active {
 /* SKILLS     */
 /*            */
 
+.skills-container,
+.card-header {
+    margin-bottom: 15px;
+}
+
 .skills-container .skill-icon {
     width: 45px;
     height: 45px;
     margin: 5px 0;
     transition: var(--transition-delay);
-    opacity: .9;
+    opacity: .8;
+}
+
+.nextjs-logo {
+    transform: scale(1.4);
 }
 
 .skill-icon:hover {
     opacity: 1;
     transform: scale(1.1);
+}
+
+.nextjs-logo:hover {
+    transform: scale(1.6);
 }
 
 
@@ -476,6 +488,16 @@ input:active {
     align-items: center;
 }
 
+
+/* SPOTIFY */
+/* SPOTIFY */
+/* SPOTIFY */
+
+.card-spotify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* PROJECTS */
 /* PROJECTS */
