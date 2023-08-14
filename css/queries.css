@@ -423,20 +423,16 @@ CHANGELOG:  DONE
         font-size: .9rem;
     }
 
-    .header-logo {
-        font-size: 1.3rem;
-    }
-
     .theme-switcher {
         transform: scale(70%)
     }
 
 
-    /*           */
-    /*           */
+    /*            */
+    /*            */
     /* FILTER-ALL */
-    /*           */
-    /*           */
+    /*            */
+    /*            */
 
     #card-intro-all {
         grid-column: 1/3;
@@ -685,8 +681,6 @@ CHANGELOG:  DONE
     header {
         margin-bottom: 80px;
     }
-
-    /* INTRODUCTION */
 
     /* CONTACT */
 
