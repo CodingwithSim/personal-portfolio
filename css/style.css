@@ -91,13 +91,13 @@ a {
 }
 
 .card-header {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 1.7rem;
+    font-weight: 500;
     margin-bottom: 24px;
 }
 
 .card-subheader {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.75px;
     text-transform: uppercase;
@@ -109,7 +109,7 @@ a {
 .btn {
     border: 3px solid var(--button-border-color);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     background: none;
     cursor: pointer;
     font-weight: 500;
@@ -136,7 +136,7 @@ a {
 .social-media-btn {
     position: absolute;
     padding: 8px;
-    border-radius: 100%;
+    border-radius: 50%;
     cursor: pointer;
     transition: ease-in-out var(--transition-delay);
     right: 16px;
@@ -166,6 +166,7 @@ a {
     column-gap: 24px;
     row-gap: 24px;
     margin-bottom: 80px;
+    max-width: 100%;
 }
 
 .grid-container {
@@ -198,6 +199,7 @@ a {
 header {
     display: flex;
     align-items: center;
+    justify-content: center;
     justify-content: space-between;
     height: 96px;
     padding: 0 32px;
@@ -207,6 +209,7 @@ header {
 
 .header-logo {
     max-width: 150px;
+    font-size: 1.2rem;
     font-family: 'Borel', cursive;
 }
 
@@ -215,6 +218,7 @@ header {
     transition: var(--transition-delay);
     padding: 4px 5px 4px 5px;
     border-radius: 100px;
+    font-weight: 500;
     transform: var(--transition-delay);
 }
 
@@ -222,7 +226,6 @@ header {
     display: flex;
     list-style: none;
     font-size: 1rem;
-    font-weight: 500;
     align-items: center;
     justify-content: center;
 }
@@ -267,6 +270,7 @@ header {
     background: var(--toggle-background);
     box-shadow: var(--toggle-box-shadow);
     transition: ease-in-out var(--toggle-transition);
+    transform: scale(80%);
 }
 
 .theme-switcher::before {
@@ -321,16 +325,17 @@ header {
     padding: 0;
     position: absolute;
     bottom: 210px;
+    left: 2px;
 }
 
 .intro-subheader {
     font-size: 1.2rem;
-    margin: 0.5em 0;
+    margin: 0.8em 0;
 }
 
 .intro-text {
     font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.6;
     color: var(--text-color);
 }
 
@@ -409,7 +414,7 @@ input:active {
     position: absolute;
     pointer-events: none;
     bottom: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -450,9 +455,9 @@ input:active {
 /* SKILLS     */
 /*            */
 
-.skill-icon {
-    width: 50px;
-    height: 50px;
+.skills-container .skill-icon {
+    width: 45px;
+    height: 45px;
     margin: 5px 0;
     transition: var(--transition-delay);
     opacity: .9;
@@ -467,7 +472,8 @@ input:active {
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10%;
+    gap: 15%;
+    align-items: center;
 }
 
 
@@ -552,45 +558,6 @@ input:active {
 }
 
 
-/* .zoom-icon {
-    color: #fff;
-    height: 20px;
-    width: 20px;
-    border-radius: 100px;
-    position: absolute;
-    background: rgb(0, 0, 0, 0.3);
-    padding: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s;
-    right: 16px;
-    bottom: 16px;
-}
-
-.zoom-icon:hover {
-    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.5);
-}
-
-.zoom-in-icon {
-    z-index: 2;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-.zoom-out-icon {
-    z-index: 2;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-}
-
-.my-custom-control {
-    pointer-events: auto;
-} */
-
-
-
 
 /*              */
 /* SOCIAL MEDIA */
@@ -614,9 +581,8 @@ input:active {
 
 .right-arrow {
     color: #fff;
-    height: 20px;
-    width: 20px;
-    border-radius: 100px;
+    height: 15px;
+    width: 15px;
 }
 
 .card-github {
