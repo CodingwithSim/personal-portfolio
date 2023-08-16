@@ -678,12 +678,14 @@ CHANGELOG:  DONE
     }
 
     /* INTRO */
+
     .intro-img {
         bottom: 300px;
     }
 
     .intro-subheader {
         font-size: 1.3rem;
+        margin: 1em 0;
     }
 
     .intro-text {
