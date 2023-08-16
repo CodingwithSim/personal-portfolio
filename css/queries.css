@@ -31,10 +31,17 @@ CHANGELOG:  DONE
     }
 
     /* INTRODUCTION */
+    .intro-subheader {
+        font-size: 1.2rem;
+        margin: 0.4em 0;
+    }
 
     .intro-text {
         font-size: .9rem;
+        line-height: 1.4;
+        margin-bottom: 0.2em;
     }
+
 
     .intro-img {
         width: 100px;
@@ -111,9 +118,14 @@ CHANGELOG:  DONE
     }
 
     /* INTRODUCTION */
+    .intro-subheader {
+        font-size: 1.2rem;
+        margin: 0.4em 0;
+    }
 
     .intro-text {
         font-size: .9rem;
+        margin-bottom: 0.2em;
     }
 
 
