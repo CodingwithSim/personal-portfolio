@@ -167,6 +167,7 @@ a {
     row-gap: 24px;
     margin-bottom: 80px;
     max-width: 100%;
+    justify-content: center;
 }
 
 .grid-container {
