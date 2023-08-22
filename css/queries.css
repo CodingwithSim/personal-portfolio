@@ -87,7 +87,7 @@ CHANGELOG:  DONE
 
     .textarea label {
         width: 100%;
-        bottom: 160px;
+        bottom: 145px;
         background-color: transparent;
     }
 
@@ -173,7 +173,7 @@ CHANGELOG:  DONE
 
     .textarea label {
         width: 100%;
-        bottom: 160px;
+        bottom: 150px;
         background-color: transparent;
     }
 
@@ -437,6 +437,12 @@ CHANGELOG:  DONE
 
     .theme-switcher {
         transform: scale(70%)
+    }
+
+    /* CONTACT */
+
+    .textarea label {
+        bottom: 150px;
     }
 
 
@@ -703,7 +709,7 @@ CHANGELOG:  DONE
     }
 
     .textarea label {
-        bottom: 235px;
+        bottom: 215px;
     }
 
     /*            */
