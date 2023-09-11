@@ -181,7 +181,7 @@ a {
     background-color: var(--card-color);
     padding: 22px;
     transition: var(--transition-delay);
-    overflow: hidden;
+    overflow: none;
     border: 3px solid var(--button-border-color);
 }
 
@@ -313,7 +313,7 @@ header {
 .card-intro {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     overflow: visible;
     position: relative;
 }
@@ -329,13 +329,13 @@ header {
 }
 
 .intro-subheader {
-    font-size: 1.2rem;
-    margin: 0.8em 0;
+    font-weight: 500;
+    margin-top: 1.2em;
 }
 
 .intro-text {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.4;
     color: var(--text-color);
 }
 
@@ -496,9 +496,88 @@ input:active {
 
 .card-spotify {
     display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
+
+/* WEATHER */
+/* WEATHER */
+/* WEATHER */
+
+.card-weather {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    position: relative;
+}
+
+.weather-search {
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.weather-search-btn {
+    margin: 0 .5em;
+    border-radius: 50%;
+    border: 3px solid var(--button-border-color);
+    height: 34px;
+    width: 34px;
+    outline: none;
+    background: var(--filter-background-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+input.weather-search-bar {
+    margin-bottom: 10px;
+    outline: none;
+    padding: 0.4em 1em;
+    border: 3px solid var(--button-border-color);
+    border-radius: 24px;
+    background: var(--filter-background-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 70px);
+}
+
+.weather-search-btn:hover {
+    background: #7c7c7c6b;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.weather .flex {
+    display: flex;
+    align-items: center;
+}
+
+.weather .description {
+    margin-left: 8px;
+}
+
+.loading {
+    visibility: hidden;
+}
+
+.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
 
 /* PROJECTS */
 /* PROJECTS */
@@ -521,6 +600,7 @@ input:active {
 .project-skills-container .skill-icon {
     width: 25px;
     height: 25px;
+    transition: var(--transition-delay);
 }
 
 .project-preview-container {

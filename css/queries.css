@@ -30,10 +30,14 @@ CHANGELOG:  DONE
         grid-template-rows: repeat(4, 216px);
     }
 
+    .card-header {
+        font-size: 1.3rem;
+    }
+
     /* INTRODUCTION */
     .intro-subheader {
-        font-size: 1.2rem;
-        margin: 0.4em 0;
+        font-size: 1.3rem;
+        margin-top: .6em;
     }
 
     .intro-text {
@@ -42,7 +46,6 @@ CHANGELOG:  DONE
         margin-bottom: 0.2em;
     }
 
-
     .intro-img {
         width: 100px;
         height: 100px;
@@ -50,6 +53,10 @@ CHANGELOG:  DONE
         padding: 0;
         position: absolute;
         bottom: 190px;
+    }
+
+    .intro-btn {
+        font-size: 0.8rem;
     }
 
     /* SKILLS */
@@ -82,12 +89,12 @@ CHANGELOG:  DONE
     .input-data textarea {
         resize: none;
         padding-top: 15px;
-        height: 120px;
+        height: 140px;
     }
 
     .textarea label {
         width: 100%;
-        bottom: 145px;
+        bottom: 165px;
         background-color: transparent;
     }
 
@@ -97,7 +104,21 @@ CHANGELOG:  DONE
         height: 200px;
         width: 100%;
     }
+
+    /* WEATHER */
+
+    .weather {
+        font-size: 0.6rem;
+    }
 }
+
+
+
+
+
+
+
+
 
 /* 
   1000PX -> 800PX 
@@ -116,18 +137,6 @@ CHANGELOG:  DONE
         grid-template-columns: repeat(3, 229px);
         grid-template-rows: repeat(4, 229px);
     }
-
-    /* INTRODUCTION */
-    .intro-subheader {
-        font-size: 1.2rem;
-        margin: 0.4em 0;
-    }
-
-    .intro-text {
-        font-size: .9rem;
-        margin-bottom: 0.2em;
-    }
-
 
     .intro-img {
         width: 100px;
@@ -215,28 +224,38 @@ CHANGELOG:  DONE
     }
 
     #card-github-all {
-        grid-column: 2/3;
+        grid-column: 2/4;
         grid-row: 3/4;
     }
 
     #card-linkedin-all {
-        grid-column: 3/4;
-        grid-row: 3/4;
+        grid-column: 2/4;
+        grid-row: 4/5;
+    }
+
+    #card-weather-all {
+        grid-column: 1/2;
+        grid-row: 4/5;
     }
 
     #card-quizzical-all {
         grid-column: 3/4;
-        grid-row: 4/6;
+        grid-row: 5/7;
     }
 
     #card-vanlife-all {
         grid-column: 2/3;
-        grid-row: 4/6;
+        grid-row: 5/7;
+    }
+
+    #card-evogym-all {
+        grid-column: 1/2;
+        grid-row: 5/7;
     }
 
     /*             */
     /*             */
-    /* FILTER-contact */
+    /* FILTER-ABOUT*/
     /*             */
     /*             */
     #card-intro-about {
@@ -250,13 +269,13 @@ CHANGELOG:  DONE
     }
 
     #card-map-about {
-        grid-column: 2/4;
-        grid-row: 2/3;
+        grid-column: 1/3;
+        grid-row: 4/5;
     }
 
     #card-contact-about {
-        grid-column: 1/2;
-        grid-row: 4/6;
+        grid-column: 3/4;
+        grid-row: 3/5;
     }
 
     #card-spotify-about {
@@ -265,23 +284,33 @@ CHANGELOG:  DONE
     }
 
     #card-github-about {
-        grid-column: 1/2;
+        grid-column: 1/3;
         grid-row: 3/4;
     }
 
     #card-linkedin-about {
-        grid-column: 1/2;
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    #card-weather-about {
+        grid-column: 3/4;
         grid-row: 2/3;
     }
 
     #card-quizzical-about {
         grid-column: 3/4;
-        grid-row: 3/5;
+        grid-row: 5/7;
     }
 
     #card-vanlife-about {
         grid-column: 2/3;
-        grid-row: 3/5
+        grid-row: 5/7
+    }
+
+    #card-evogym-about {
+        grid-column: 1/2;
+        grid-row: 5/7;
     }
 
     /*                */
@@ -291,17 +320,17 @@ CHANGELOG:  DONE
     /*                */
     #card-intro-projects {
         grid-column: 1/3;
-        grid-row: 4/5;
+        grid-row: 6/7;
     }
 
-    #card-skills-skills {
-        grid-column: 3/4;
-        grid-row: 1/2;
+    #card-skills-projects {
+        grid-column: 1/2;
+        grid-row: 3/4;
     }
 
     #card-map-projects {
         grid-column: 1/3;
-        grid-row: 3/4;
+        grid-row: 5/6;
     }
 
     #card-contact-projects {
@@ -315,21 +344,31 @@ CHANGELOG:  DONE
     }
 
     #card-github-projects {
-        grid-column: 3/4;
-        grid-row: 2/3;
-    }
-
-    #card-linkedin-projects {
-        grid-column: 3/4;
+        grid-column: 2/4;
         grid-row: 3/4;
     }
 
+    #card-linkedin-projects {
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+
+    #card-weather-projects {
+        grid-column: 3/4;
+        grid-row: 6/7;
+    }
+
     #card-quizzical-projects {
-        grid-column: 2/3;
+        grid-column: 3/4;
         grid-row: 1/3;
     }
 
     #card-vanlife-projects {
+        grid-column: 2/3;
+        grid-row: 1/3
+    }
+
+    #card-evogym-projects {
         grid-column: 1/2;
         grid-row: 1/3
     }
@@ -342,8 +381,8 @@ CHANGELOG:  DONE
 
 
     #card-intro-contact {
-        grid-column: 2/4;
-        grid-row: 2/3;
+        grid-column: 1/3;
+        grid-row: 3/4;
     }
 
     #card-skills-contact {
@@ -353,7 +392,7 @@ CHANGELOG:  DONE
 
     #card-map-contact {
         grid-column: 1/3;
-        grid-row: 3/4;
+        grid-row: 4/5;
     }
 
     #card-contact-contact {
@@ -362,33 +401,40 @@ CHANGELOG:  DONE
     }
 
     #card-spotify-contact {
-        grid-column: 3/4;
-        grid-row: 4/6;
+        grid-column: 2/4;
+        grid-row: 5/6;
     }
 
     #card-github-contact {
-        grid-column: 3/4;
+        grid-column: 2/4;
         grid-row: 1/2;
     }
 
     #card-linkedin-contact {
-        grid-column: 2/3;
-        grid-row: 1/2;
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    #card-weather-contact {
+        grid-column: 3/4;
+        grid-row: 4/5;
     }
 
     #card-quizzical-contact {
-        grid-column: 2/3;
-        grid-row: 4/6;
+        grid-column: 3/4;
+        grid-row: 5/7;
     }
 
     #card-vanlife-contact {
+        grid-column: 2/3;
+        grid-row: 5/7
+    }
+
+    #card-evogym-contact {
         grid-column: 1/2;
-        grid-row: 4/6
+        grid-row: 5/7;
     }
 }
-
-
-
 
 
 
@@ -418,7 +464,7 @@ CHANGELOG:  DONE
 
     .grid {
         grid-template-columns: repeat(2, 229px);
-        grid-template-rows: repeat(7, 229px);
+        grid-template-rows: repeat(9, 229px);
     }
 
     /* HEADER */
@@ -442,7 +488,11 @@ CHANGELOG:  DONE
     /* CONTACT */
 
     .textarea label {
-        bottom: 150px;
+        bottom: 170px;
+    }
+
+    .input-data textarea {
+        height: 140px;
     }
 
 
@@ -459,17 +509,17 @@ CHANGELOG:  DONE
 
     #card-skills-all {
         grid-column: 1/2;
-        grid-row: 2/3;
+        grid-row: 3/4;
     }
 
     #card-map-all {
-        grid-column: 2/3;
+        grid-column: 1/3;
         grid-row: 2/3;
     }
 
     #card-contact-all {
         grid-column: 1/2;
-        grid-row: 3/5;
+        grid-row: 4/6;
     }
 
     #card-spotify-all {
@@ -478,23 +528,33 @@ CHANGELOG:  DONE
     }
 
     #card-github-all {
-        grid-column: 2/3;
-        grid-row: 4/5;
+        grid-column: 1/2;
+        grid-row: 6/8;
     }
 
     #card-linkedin-all {
+        grid-column: 2/3;
+        grid-row: 4/6;
+    }
+
+    #card-weather-all {
         grid-column: 2/3;
         grid-row: 3/4;
     }
 
     #card-quizzical-all {
         grid-column: 2/3;
-        grid-row: 5/7;
+        grid-row: 8/10;
     }
 
     #card-vanlife-all {
         grid-column: 1/2;
-        grid-row: 5/7;
+        grid-row: 8/10;
+    }
+
+    #card-evogym-all {
+        grid-column: 2/3;
+        grid-row: 6/8;
     }
 
     /*             */
@@ -510,17 +570,17 @@ CHANGELOG:  DONE
 
     #card-skills-about {
         grid-column: 1/2;
-        grid-row: 2/3;
+        grid-row: 3/4;
     }
 
     #card-map-about {
-        grid-column: 2/3;
+        grid-column: 1/3;
         grid-row: 2/3;
     }
 
     #card-contact-about {
         grid-column: 1/2;
-        grid-row: 3/5;
+        grid-row: 6/8;
     }
 
     #card-spotify-about {
@@ -529,23 +589,33 @@ CHANGELOG:  DONE
     }
 
     #card-github-about {
-        grid-column: 2/3;
-        grid-row: 4/5;
+        grid-column: 1/2;
+        grid-row: 4/6;
     }
 
     #card-linkedin-about {
         grid-column: 2/3;
-        grid-row: 3/4;
+        grid-row: 3/5;
+    }
+
+    #card-weather-about {
+        grid-column: 2/3;
+        grid-row: 5/6;
     }
 
     #card-quizzical-about {
         grid-column: 2/3;
-        grid-row: 5/7;
+        grid-row: 8/10;
     }
 
     #card-vanlife-about {
         grid-column: 1/2;
-        grid-row: 5/7;
+        grid-row: 8/10;
+    }
+
+    #card-evogym-about {
+        grid-column: 2/3;
+        grid-row: 6/8;
     }
 
     /*                */
@@ -556,22 +626,22 @@ CHANGELOG:  DONE
 
     #card-intro-projects {
         grid-column: 1/3;
-        grid-row: 6/7;
+        grid-row: 8/9;
     }
 
     #card-skills-projects {
         grid-column: 1/2;
-        grid-row: 3/4;
+        grid-row: 5/6;
     }
 
     #card-map-projects {
-        grid-column: 2/3;
-        grid-row: 5/6;
+        grid-column: 1/3;
+        grid-row: 9/10;
     }
 
     #card-contact-projects {
         grid-column: 1/2;
-        grid-row: 4/6;
+        grid-row: 6/8;
     }
 
     #card-spotify-projects {
@@ -581,20 +651,30 @@ CHANGELOG:  DONE
 
     #card-github-projects {
         grid-column: 2/3;
-        grid-row: 3/4;
+        grid-row: 3/5;
     }
 
     #card-linkedin-projects {
         grid-column: 2/3;
-        grid-row: 4/5;
+        grid-row: 6/8;
+    }
+
+    #card-weather-projects {
+        grid-column: 2/3;
+        grid-row: 5/6;
     }
 
     #card-quizzical-projects {
-        grid-column: 2/3;
-        grid-row: 1/3;
+        grid-column: 1/2;
+        grid-row: 3/5;
     }
 
     #card-vanlife-projects {
+        grid-column: 2/3;
+        grid-row: 1/3
+    }
+
+    #card-evogym-projects {
         grid-column: 1/2;
         grid-row: 1/3
     }
@@ -607,17 +687,17 @@ CHANGELOG:  DONE
 
     #card-intro-contact {
         grid-column: 1/3;
-        grid-row: 3/4;
+        grid-row: 8/9;
     }
 
     #card-skills-contact {
-        grid-column: 2/3;
-        grid-row: 4/5;
+        grid-column: 1/2;
+        grid-row: 7/8;
     }
 
     #card-map-contact {
-        grid-column: 1/2;
-        grid-row: 4/5;
+        grid-column: 1/3;
+        grid-row: 9/10;
     }
 
     #card-contact-contact {
@@ -626,28 +706,38 @@ CHANGELOG:  DONE
     }
 
     #card-spotify-contact {
-        grid-column: 3/4;
-        grid-row: 4/6;
+        grid-column: 1/3;
+        grid-row: 5/6;
     }
 
     #card-github-contact {
-        grid-column: 2/3;
-        grid-row: 2/3;
+        grid-column: 1/2;
+        grid-row: 3/5;
     }
 
     #card-linkedin-contact {
         grid-column: 2/3;
-        grid-row: 1/2;
+        grid-row: 1/3;
+    }
+
+    #card-weather-contact {
+        grid-column: 2/3;
+        grid-row: 7/8;
     }
 
     #card-quizzical-contact {
-        grid-column: 2/3;
+        grid-column: 1/2;
         grid-row: 5/7;
     }
 
     #card-vanlife-contact {
-        grid-column: 1/2;
-        grid-row: 5/7;
+        grid-column: 2/3;
+        grid-row: 5/7
+    }
+
+    #card-evogym-contact {
+        grid-column: 2/3;
+        grid-row: 3/5
     }
 }
 
@@ -680,13 +770,17 @@ CHANGELOG:  DONE
 
     .grid {
         grid-template-columns: repeat(2, 168px);
-        grid-template-rows: repeat(17, 168px);
+        grid-template-rows: repeat(21, 168px);
     }
 
     /* INTRO */
 
+    .card-intro {
+        justify-content: space-evenly;
+    }
+
     .intro-img {
-        bottom: 300px;
+        bottom: 310px;
     }
 
     .intro-subheader {
@@ -705,11 +799,11 @@ CHANGELOG:  DONE
     /* CONTACT */
 
     .input-data textarea {
-        height: 185px;
+        height: 210px;
     }
 
     .textarea label {
-        bottom: 215px;
+        bottom: 240px;
     }
 
     /*            */
@@ -757,6 +851,25 @@ CHANGELOG:  DONE
         padding: 4px;
     }
 
+    /* WEATHER */
+
+    .weather {
+        padding: 30px;
+    }
+
+    .card-weather {
+        font-size: 0.8rem;
+        color: var(--text-color);
+        position: relative;
+        text-align: center;
+    }
+
+    .weather .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 
     /*           */
     /*           */
@@ -771,7 +884,7 @@ CHANGELOG:  DONE
 
     #card-skills-all {
         grid-column: 1/3;
-        grid-row: 5/7;
+        grid-row: 7/9;
     }
 
     #card-map-all {
@@ -781,7 +894,7 @@ CHANGELOG:  DONE
 
     #card-contact-all {
         grid-column: 1/3;
-        grid-row: 8/11;
+        grid-row: 10/13;
     }
 
     #card-spotify-all {
@@ -791,22 +904,32 @@ CHANGELOG:  DONE
 
     #card-github-all {
         grid-column: 2/3;
-        grid-row: 7/8;
+        grid-row: 9/10;
     }
 
     #card-linkedin-all {
         grid-column: 1/2;
-        grid-row: 7/8;
+        grid-row: 9/10;
+    }
+
+    #card-weather-all {
+        grid-column: 1/3;
+        grid-row: 5/7;
     }
 
     #card-quizzical-all {
         grid-column: 1/3;
-        grid-row: 11/14;
+        grid-row: 19/22;
     }
 
     #card-vanlife-all {
         grid-column: 1/3;
-        grid-row: 14/17;
+        grid-row: 16/19;
+    }
+
+    #card-evogym-all {
+        grid-column: 1/3;
+        grid-row: 13/16;
     }
 
     /*             */
@@ -823,7 +946,7 @@ CHANGELOG:  DONE
 
     #card-skills-about {
         grid-column: 1/3;
-        grid-row: 5/7;
+        grid-row: 7/9;
     }
 
     #card-map-about {
@@ -833,7 +956,7 @@ CHANGELOG:  DONE
 
     #card-contact-about {
         grid-column: 1/3;
-        grid-row: 8/11;
+        grid-row: 10/13;
     }
 
     #card-spotify-about {
@@ -843,22 +966,32 @@ CHANGELOG:  DONE
 
     #card-github-about {
         grid-column: 2/3;
-        grid-row: 7/8;
+        grid-row: 9/10;
     }
 
     #card-linkedin-about {
         grid-column: 1/2;
-        grid-row: 7/8;
+        grid-row: 9/10;
+    }
+
+    #card-weather-about {
+        grid-column: 1/3;
+        grid-row: 5/7;
     }
 
     #card-quizzical-about {
         grid-column: 1/3;
-        grid-row: 11/14;
+        grid-row: 19/22;
     }
 
     #card-vanlife-about {
         grid-column: 1/3;
-        grid-row: 14/17;
+        grid-row: 16/19;
+    }
+
+    #card-evogym-about {
+        grid-column: 1/3;
+        grid-row: 13/16;
     }
 
     /*                */
@@ -869,22 +1002,22 @@ CHANGELOG:  DONE
 
     #card-intro-projects {
         grid-column: 1/3;
-        grid-row: 10/12;
+        grid-row: 16/18;
     }
 
     #card-skills-projects {
         grid-column: 1/3;
-        grid-row: 7/9;
+        grid-row: 10/12;
     }
 
     #card-map-projects {
         grid-column: 1/3;
-        grid-row: 12/14;
+        grid-row: 18/20;
     }
 
     #card-contact-projects {
         grid-column: 1/3;
-        grid-row: 14/17;
+        grid-row: 13/16;
     }
 
     #card-spotify-projects {
@@ -894,20 +1027,30 @@ CHANGELOG:  DONE
 
     #card-github-projects {
         grid-column: 2/3;
-        grid-row: 9/10;
+        grid-row: 12/13;
     }
 
     #card-linkedin-projects {
         grid-column: 1/2;
-        grid-row: 9/10;
+        grid-row: 12/13;
+    }
+
+    #card-weather-projects {
+        grid-column: 1/3;
+        grid-row: 20/22;
     }
 
     #card-quizzical-projects {
         grid-column: 1/3;
-        grid-row: 4/7;
+        grid-row: 7/10;
     }
 
     #card-vanlife-projects {
+        grid-column: 1/3;
+        grid-row: 4/7;
+    }
+
+    #card-evogym-projects {
         grid-column: 1/3;
         grid-row: 1/4;
     }
@@ -918,17 +1061,17 @@ CHANGELOG:  DONE
 
     #card-intro-contact {
         grid-column: 1/3;
-        grid-row: 5/7;
+        grid-row: 16/18;
     }
 
     #card-skills-contact {
         grid-column: 1/3;
-        grid-row: 7/9;
+        grid-row: 14/16;
     }
 
     #card-map-contact {
         grid-column: 1/3;
-        grid-row: 9/11;
+        grid-row: 18/20;
     }
 
     #card-contact-contact {
@@ -948,7 +1091,12 @@ CHANGELOG:  DONE
 
     #card-linkedin-contact {
         grid-column: 1/2;
-        grid-row: 4/5;
+        grid-row: 4/4;
+    }
+
+    #card-weather-contact {
+        grid-column: 1/3;
+        grid-row: 20/22;
     }
 
     #card-quizzical-contact {
@@ -958,6 +1106,11 @@ CHANGELOG:  DONE
 
     #card-vanlife-contact {
         grid-column: 1/3;
-        grid-row: 14/17;
+        grid-row: 8/11;
+    }
+
+    #card-evogym-contact {
+        grid-column: 1/3;
+        grid-row: 5/8;
     }
 }

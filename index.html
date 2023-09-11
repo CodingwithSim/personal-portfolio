@@ -12,7 +12,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="%/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="%/favicons/site.webmanifest">
 
     <meta name="image" content="/assets/og.png" />
     <meta property="og:title" content="Simba Zajota's Portfolio" />
@@ -55,15 +54,16 @@
                 <!-- INTRO CARD -->
                 <div class="card card-intro about" id="card-intro-all">
                     <img class="intro-img" src="/assets/memoji3.png" alt="">
-                    <div class="intro-text-container">
+                    <div>
                         <h2 class="intro-subheader">Front-End Developer</h2>
+                    </div>
+                    <div>
                         <p class="intro-text">Hey, my name is Simba and welcome to my portfolio! My goal is to
                             develop my skills as a developer and join an inspiring team. I transform designs into
                             captivating user experiences, let's craft exceptional digital experiences together.</p>
                     </div>
                     <div class="intro-btn-container">
                         <button class="btn intro-btn primary-btn">My Projects...</button>
-                        <!-- <button class="btn primary-btn">Expand...</button> -->
                     </div>
                 </div>
                 <!-- MAP -->
@@ -81,7 +81,7 @@
                 <div class="card card-contact contact" id="card-contact-all">
                     <form action="https://formsubmit.co/6a55411020ffc2777bed857cc61d45ec" method="POST">
                         <input type="hidden" name="_captcha" value="false">
-                        <h2 lass="card-header">Get in Touch:</h2>
+                        <h2 class="card-header">Get in Touch:</h2>
                         <div class="form-row">
                             <div class="input-data">
                                 <input type="text" name="firstname" required>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="form-row">
                             <div class="input-data">
-                                <input type="email" name="email" required>
+                                <input type="text email" name="email" required>
                                 <div class="underline"></div>
                                 <label for="">Email Address</label>
                             </div>
@@ -159,11 +159,39 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- SPOTIFY -->
                 <!-- SPOTIFY -->
                 <!-- SPOTIFY -->
                 <div class=" card card-spotify" id="card-spotify-all">
                     <p>Spotify Placeholder</p>
+                </div>
+
+                <!-- WEATHER -->
+                <!-- WEATHER -->
+                <!-- WEATHER -->
+                <div class="card card-weather about" id="card-weather-all">
+                    <div class="weather-search">
+                        <input type="text" class="weather-search-bar" placeholder="Search">
+                        <button class="weather-search-btn">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="weather loading">
+                        <h2 class="city">Weather in Denver</h2>
+                        <h1 class="temp">51°C</h1>
+                        <div class="flex">
+                            <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+                            <div class="description card-subheader">Cloudy</div>
+                        </div>
+                        <div class="humidity card-subheader">Humidity: 60%</div>
+                        <div class="wind card-subheader">Wind speed: 6.2 km/h</div>
+                    </div>
                 </div>
 
                 <!-- PROJECTS -->
@@ -177,17 +205,14 @@
                     <div class="project-builtwith-container">
                         <p class="card-subheader">BUILT WITH</p>
                         <div class="project-skills-container">
-
-                            <img class="skill-icon" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
-                                alt="React Logo" />
-
-
                             <img class="skill-icon" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
                                 alt="HTML Logo" />
 
-
                             <img class="skill-icon" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
                                 alt="CSS Logo" />
+
+                            <img class="skill-icon" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+                                alt="React Logo" />
                         </div>
                     </div>
                     <div class="project-preview-container">
@@ -198,10 +223,11 @@
                             <a href="https://willowy-fenglisu-6562dc.netlify.app/" target="_blank">View</a>
                         </div>
                         <div class="btn secondary-btn">
-                            <a href="">About</a>
+                            <a href="https://github.com/lzajota/quizzical-app--react" target="_blank">About</a>
                         </div>
                     </div>
                 </div>
+
 
                 <div class="card card-vanlife projects" id="card-vanlife-all">
                     <div>
@@ -212,8 +238,44 @@
                         <div>
                             <p class="card-subheader">BUILT WITH</p>
                             <div class="project-skills-container">
+                                <img class="skill-icon"
+                                    src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
+                                    alt="HTML Logo" />
+
+                                <img class="skill-icon" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
+                                    alt="CSS Logo" />
+
                                 <img class="skill-icon" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
                                     alt="React Logo" />
+
+                                <img class="skill-icon"
+                                    src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
+                                    alt="Firebase Logo" />
+                            </div>
+                        </div>
+                        <div class="project-preview-container">
+                            <img src="assets/vanlife-preview.png" alt="">
+                        </div>
+                        <div class="project-btn-container">
+                            <div class="btn primary-btn">
+                                <a href="https://vocal-kataifi-22b627.netlify.app/" target="_blank">View</a>
+                            </div>
+                            <div class="btn secondary-btn">
+                                <a href="https://github.com/lzajota/vanlife-app--react" target="_blank">About</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-evogym projects" id="card-evogym-all">
+                    <div>
+                        <p class="card-subheader">PROJECT</p>
+                        <h2 class="card-header">Evogym</h2>
+                    </div>
+                    <div class="card-project-details">
+                        <div>
+                            <p class="card-subheader">BUILT WITH</p>
+                            <div class="project-skills-container">
 
                                 <img class="skill-icon"
                                     src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
@@ -222,31 +284,37 @@
                                 <img class="skill-icon" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
                                     alt="CSS Logo" />
 
+                                <img class="skill-icon" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+                                    alt="React Logo" />
+
                                 <img class="skill-icon"
-                                    src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
-                                    alt="Firebase Logo" />
+                                    src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"
+                                    alt="Typescript Logo" />
+
+                                <img class="skill-icon"
+                                    src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+                                    alt="Typescript Logo" />
+
                             </div>
                         </div>
                         <div class="project-preview-container">
-                            <img src="assets/Vanlife-preview.png" alt="">
+                            <img src="/assets/evogym-preview.png" alt="">
                         </div>
                         <div class="project-btn-container">
                             <div class="btn primary-btn">
-                                <a href="https://vocal-kataifi-22b627.netlify.app/" target="_blank">View</a>
+                                <a href="https://aquamarine-rolypoly-752e6e.netlify.app" target="_blank">View</a>
                             </div>
                             <div class="btn secondary-btn">
-                                <a href="">About</a>
+                                <a href="https://github.com/lzajota/gym-typescript" target="_blank">About</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- GITHUB -->
                 <!-- GITHUB -->
                 <!-- GITHUB -->
                 <div class="card card-github social-media-container about projects contact" id="card-github-all">
-                    <a href="https://github.com/lzajota logo-github" aria-label="Simba's Github" target="_blank"
-                        rel="noopener">
+                    <a href="https://github.com/lzajota" aria-label="Simba's Github" target="_blank" rel="noopener">
                         <ion-icon class="social-media-logo" name="logo-github"></ion-icon></a>
                     <a class="social-media-btn" href="https://github.com/lzajota" target="_blank" rel="noopener">
                         <ion-icon class="right-arrow" name="arrow-forward-outline"></ion-icon>

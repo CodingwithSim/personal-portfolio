@@ -177,8 +177,10 @@ filterContainer.addEventListener(`click`, function (event) {
     document.querySelector(`.card-spotify`).setAttribute(`id`, `card-spotify-${clicked.dataset.filter}`);
     document.querySelector(`.card-github`).setAttribute(`id`, `card-github-${clicked.dataset.filter}`);
     document.querySelector(`.card-linkedin`).setAttribute(`id`, `card-linkedin-${clicked.dataset.filter}`);
+    document.querySelector(`.card-weather`).setAttribute(`id`, `card-weather-${clicked.dataset.filter}`);
     document.querySelector(`.card-vanlife`).setAttribute(`id`, `card-vanlife-${clicked.dataset.filter}`);
     document.querySelector(`.card-quizzical`).setAttribute(`id`, `card-quizzical-${clicked.dataset.filter}`);
+    document.querySelector(`.card-evogym`).setAttribute(`id`, `card-evogym-${clicked.dataset.filter}`);
 })
 
 
@@ -192,59 +194,133 @@ window.onload = () => {
 };
 
 
-// SPOTIFY API
-// SPOTIFY API
-// SPOTIFY API
+// WEATHER API
+// WEATHER API
+// WEATHER API
 
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
 
-const clientSecret = "afa9443db3ce408cad6bdccc5cdd4877";
+        console.log(latitude)
 
-// app.js
+        let weather = {
+            apiKey: "e960a1c2edec148280ede019ca0e60b9",
+            fetchWeather: function (city) {
+                fetch(
+                    "https://api.openweathermap.org/data/2.5/weather?q=" +
+                    city +
+                    "&units=metric&appid=" +
+                    this.apiKey
+                )
+                    .then((response) => {
+                        if (!response.ok) {
+                            alert("No weather found.");
+                            throw new Error("No weather found.");
+                        }
+                        return response.json();
+                    })
+                    .then((data) => this.displayWeather(data));
+            },
+            displayWeather: function (data) {
+                const { name } = data;
+                const { icon, description } = data.weather[0];
+                const { temp, humidity } = data.main;
+                const { speed } = data.wind;
+                document.querySelector(".city").innerText = "Weather in " + name;
+                document.querySelector(".icon").src =
+                    "https://openweathermap.org/img/wn/" + icon + ".png";
+                document.querySelector(".description").innerText = description;
+                document.querySelector(".temp").innerText = temp + "°C";
+                document.querySelector(".humidity").innerText =
+                    "Humidity: " + humidity + "%";
+                document.querySelector(".wind").innerText =
+                    "Wind speed: " + speed + " km/h";
+                document.querySelector(".weather").classList.remove("loading");
+                // document.querySelector(".card-weather").style.backgroundImage =
+                // "url('https://source.unsplash.com/1600x900/?" + description + "')";
+            },
+            search: function () {
+                this.fetchWeather(document.querySelector(".weather-search-bar").value);
+            },
+        };
 
-// Your Spotify Developer Client ID and Redirect URI
-const clientId = "f1c236007d4d446e8277ecc86d4c2319";
-const redirectUri = "https://wondrous-pie-af47eb.netlify.app/"; // Set this to the URI you've configured in your Spotify Developer Dashboard
+        document.querySelector(".weather-search button").addEventListener("click", function () {
+            weather.search();
+        });
 
-// Check if the access token is present in the URL (after user authorization)
-const urlParams = new URLSearchParams(window.location.search);
-const accessToken = urlParams.get("access_token");
+        document
+            .querySelector(".weather-search-bar")
+            .addEventListener("keyup", function (event) {
+                if (event.key == "Enter") {
+                    weather.search();
+                }
+            });
 
-if (accessToken) {
-    // Hide the login button and show the last played card
-    document.getElementById("loginBtn").style.display = "none";
-    document.getElementById("lastPlayedCard").style.display = "block";
-
-    // Fetch the last played song using the access token
-    fetchLastPlayedSong(accessToken);
-} else {
-    // If the access token is not present, show the login button
-    document.getElementById("loginBtn").addEventListener("click", () => {
-        // Redirect the user to Spotify's authorization page
-        const scopes = "user-read-recently-played"; // Add any additional scopes you need
-        const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes)}&response_type=token`;
-        window.location.href = authUrl;
+        weather.fetchWeather("London");
     });
+} else {
+    console.log("Geolocation is not supported by this browser.");
 }
 
-function fetchLastPlayedSong(token) {
-    fetch("https://api.spotify.com/v1/me/player/recently-played", {
-        headers: {
-            "Authorization": `Bearer ${token}`
-        }
-    })
-        .then(response => response.json())
-        .then(data => {
-            const lastPlayed = data.items[0].track;
-            console.log(lastPlayed)
-            const trackName = lastPlayed.name;
-            const artist = lastPlayed.artists.map(artist => artist.name).join(", ");
-            const albumArtUrl = lastPlayed.album.images[0].url;
 
-            document.getElementById("trackName").textContent = "Track: " + trackName;
-            document.getElementById("artist").textContent = "Artist(s): " + artist;
-            document.getElementById("albumArt").src = albumArtUrl;
-        })
-        .catch(error => {
-            console.error("Error fetching last played song:", error);
-        });
-} 
+
+
+// SPOTIFY API
+// SPOTIFY API
+// SPOTIFY API
+
+
+// const clientSecret = "afa9443db3ce408cad6bdccc5cdd4877";
+
+// // app.js
+
+// // Your Spotify Developer Client ID and Redirect URI
+// const clientId = "f1c236007d4d446e8277ecc86d4c2319";
+// const redirectUri = "https://wondrous-pie-af47eb.netlify.app/"; // Set this to the URI you've configured in your Spotify Developer Dashboard
+
+// // Check if the access token is present in the URL (after user authorization)
+// const urlParams = new URLSearchParams(window.location.search);
+// const accessToken = urlParams.get("access_token");
+
+// if (accessToken) {
+//     // Hide the login button and show the last played card
+//     document.getElementById("loginBtn").style.display = "none";
+//     document.getElementById("lastPlayedCard").style.display = "block";
+
+//     // Fetch the last played song using the access token
+//     fetchLastPlayedSong(accessToken);
+// } else {
+//     // If the access token is not present, show the login button
+//     document.getElementById("loginBtn").addEventListener("click", () => {
+//         // Redirect the user to Spotify's authorization page
+//         const scopes = "user-read-recently-played"; // Add any additional scopes you need
+//         const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes)}&response_type=token`;
+//         window.location.href = authUrl;
+//     });
+// }
+
+// function fetchLastPlayedSong(token) {
+//     fetch("https://api.spotify.com/v1/me/player/recently-played", {
+//         headers: {
+//             "Authorization": `Bearer ${token}`
+//         }
+//     })
+//         .then(response => response.json())
+//         .then(data => {
+//             const lastPlayed = data.items[0].track;
+//             console.log(lastPlayed)
+//             const trackName = lastPlayed.name;
+//             const artist = lastPlayed.artists.map(artist => artist.name).join(", ");
+//             const albumArtUrl = lastPlayed.album.images[0].url;
+
+//             document.getElementById("trackName").textContent = "Track: " + trackName;
+//             document.getElementById("artist").textContent = "Artist(s): " + artist;
+//             document.getElementById("albumArt").src = albumArtUrl;
+//         })
+//         .catch(error => {
+//             console.error("Error fetching last played song:", error);
+//         });
+// } 
