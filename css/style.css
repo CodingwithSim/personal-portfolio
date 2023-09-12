@@ -555,6 +555,7 @@ input.weather-search-bar {
     text-transform: uppercase;
 }
 
+.city,
 .temp {
     font-weight: 500;
 }
