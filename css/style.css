@@ -557,6 +557,7 @@ input.weather-search-bar {
 
 .city,
 .temp {
+    font-size: 1.1rem;
     font-weight: 500;
 }
 
