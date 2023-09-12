@@ -552,8 +552,12 @@ input.weather-search-bar {
     flex-direction: column;
     justify-content: space-between;
     height: 80%;
-    font-weight: 500;
+    font-weight: 200;
     text-transform: uppercase;
+}
+
+.city .temp {
+    font-weight: 300;
 }
 
 .weather .flex {
