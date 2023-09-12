@@ -107,8 +107,9 @@ CHANGELOG:  DONE
 
     /* WEATHER */
 
-    .weather {
-        font-size: 0.6rem;
+    .city,
+    .temp {
+        font-size: 1rem;
     }
 }
 
