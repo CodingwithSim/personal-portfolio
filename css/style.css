@@ -134,6 +134,7 @@ a {
 }
 
 .social-media-btn {
+    display: flex;
     position: absolute;
     padding: 8px;
     border-radius: 50%;
@@ -614,7 +615,7 @@ input.weather-search-bar {
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    margin: 20px 0;
+    margin: 15% 0;
     justify-content: center;
 }
 
@@ -689,8 +690,6 @@ input.weather-search-bar {
 
 .right-arrow {
     color: #fff;
-    height: 15px;
-    width: 15px;
 }
 
 .card-github {

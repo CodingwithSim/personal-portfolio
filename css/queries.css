@@ -103,6 +103,7 @@ CHANGELOG:  DONE
     .project-preview-container {
         height: 200px;
         width: 100%;
+        margin: 10% 0;
     }
 
     /* WEATHER */
@@ -178,12 +179,12 @@ CHANGELOG:  DONE
     .input-data textarea {
         resize: none;
         padding-top: 15px;
-        height: 120px;
+        height: 140px;
     }
 
     .textarea label {
         width: 100%;
-        bottom: 150px;
+        bottom: 170px;
         background-color: transparent;
     }
 
@@ -192,7 +193,9 @@ CHANGELOG:  DONE
     .project-preview-container {
         height: 200px;
         width: 100%;
+        margin: 15% 0;
     }
+
 
     /*           */
     /*           */
@@ -484,16 +487,6 @@ CHANGELOG:  DONE
 
     .theme-switcher {
         transform: scale(70%)
-    }
-
-    /* CONTACT */
-
-    .textarea label {
-        bottom: 170px;
-    }
-
-    .input-data textarea {
-        height: 140px;
     }
 
 
