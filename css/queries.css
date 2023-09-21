@@ -888,7 +888,7 @@ CHANGELOG:  DONE
 
     #card-contact-all {
         grid-column: 1/3;
-        grid-row: 10/13;
+        grid-row: 19/22;
     }
 
     #card-spotify-all {
@@ -913,17 +913,17 @@ CHANGELOG:  DONE
 
     #card-quizzical-all {
         grid-column: 1/3;
-        grid-row: 19/22;
+        grid-row: 16/19;
     }
 
     #card-vanlife-all {
         grid-column: 1/3;
-        grid-row: 16/19;
+        grid-row: 13/16;
     }
 
     #card-evogym-all {
         grid-column: 1/3;
-        grid-row: 13/16;
+        grid-row: 10/13;
     }
 
     /*             */
@@ -950,7 +950,7 @@ CHANGELOG:  DONE
 
     #card-contact-about {
         grid-column: 1/3;
-        grid-row: 10/13;
+        grid-row: 19/22;
     }
 
     #card-spotify-about {
@@ -975,17 +975,17 @@ CHANGELOG:  DONE
 
     #card-quizzical-about {
         grid-column: 1/3;
-        grid-row: 19/22;
+        grid-row: 16/19;
     }
 
     #card-vanlife-about {
         grid-column: 1/3;
-        grid-row: 16/19;
+        grid-row: 13/16;
     }
 
     #card-evogym-about {
         grid-column: 1/3;
-        grid-row: 13/16;
+        grid-row: 10/13;
     }
 
     /*                */
